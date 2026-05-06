@@ -221,12 +221,12 @@ tailwind.config = {
   <div class="absolute inset-0 overflow-hidden hero-img-bg">
     <video autoplay muted loop playsinline
            poster="{{ asset('images/hero-banner.jpg') }}"
-           class="absolute inset-0 w-full h-full object-cover opacity-90">
+           class="absolute inset-0 w-full h-full object-cover opacity-95">
       <source src="{{ asset('videos/hero.mp4') }}" type="video/mp4">
     </video>
-    <div class="absolute inset-0 bg-black/55"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/25"></div>
+    <div class="absolute inset-0 bg-black/30"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-black/55 via-black/25 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/10"></div>
   </div>
 
   {{-- Main hero content --}}
