@@ -1,15 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Southern Mega Steel Enterprise Inc. â€” Your Partner in Steel Excellence</title>
-<meta name="description" content="Southern Mega Steel Enterprise Inc. â€” premium structural steel products, fabrication, and reliable delivery across the Philippines. Est. 1996, Bacoor Cavite.">
+<title>Southern Mega Steel Enterprise Inc. — Your Partner in Steel Excellence</title>
+<meta name="description" content="Southern Mega Steel Enterprise Inc. — premium structural steel products, fabrication, and reliable delivery across the Philippines. Est. 1996, Bacoor Cavite.">
 
 {{-- Open Graph / Facebook --}}
 <meta property="og:type"        content="website">
 <meta property="og:site_name"   content="Southern Mega Steel Enterprise Inc.">
-<meta property="og:title"       content="Southern Mega Steel Enterprise Inc. â€” Your Partner in Steel Excellence">
+<meta property="og:title"       content="Southern Mega Steel Enterprise Inc. — Your Partner in Steel Excellence">
 <meta property="og:description" content="Premium structural steel products, fabrication services, and nationwide delivery. I-Beam, Wide Flange, MS Plate, Rebar, Steel Pipes & more. Est. 1996, Bacoor Cavite.">
 <meta property="og:url"         content="{{ url('/') }}">
 <meta property="og:image"       content="{{ asset('images/og-image.jpg') }}">
@@ -24,8 +24,8 @@
 <meta name="twitter:description" content="Premium structural steel products & fabrication. Est. 1996, Bacoor Cavite, Philippines.">
 <meta name="twitter:image"       content="{{ asset('images/og-image.jpg') }}">
 
-{{-- Google Analytics â€” replace GA_MEASUREMENT_ID with your actual ID --}}
-{{-- e.g. G-XXXXXXXXXX â€” get it from analytics.google.com --}}
+{{-- Google Analytics — replace GA_MEASUREMENT_ID with your actual ID --}}
+{{-- e.g. G-XXXXXXXXXX — get it from analytics.google.com --}}
 {{--
 <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
 <script>
@@ -36,7 +36,7 @@
 </script>
 --}}
 
-{{-- Facebook Pixel â€” replace YOUR_PIXEL_ID with your actual Pixel ID --}}
+{{-- Facebook Pixel — replace YOUR_PIXEL_ID with your actual Pixel ID --}}
 {{-- Get it from business.facebook.com/events/manager --}}
 {{--
 <script>
@@ -105,7 +105,7 @@ tailwind.config = {
   .hero-text-shadow { text-shadow: 0 2px 16px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.9); }
   .hero-sub-shadow  { text-shadow: 0 1px 8px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.9); }
 
-  /* Hero background image â€” place file at public/images/hero-banner.jpg */
+  /* Hero background image — place file at public/images/hero-banner.jpg */
   .hero-img-bg {
     background-image: url('{{ asset("images/hero-banner.jpg") }}');
     background-size: cover;
@@ -173,7 +173,7 @@ tailwind.config = {
   </div>
 </div>
 
-{{-- â”€â”€ Cookie Consent Banner â”€â”€ --}}
+{{-- ── Cookie Consent Banner ── --}}
 <div x-data="{
        show: false,
        init() {
@@ -221,7 +221,7 @@ tailwind.config = {
 <main>
 
 <!-- ================================================================
-     HERO  â€” full-screen dark-overlay banner
+     HERO  — full-screen dark-overlay banner
 ================================================================ -->
 <section id="home" class="relative min-h-screen flex flex-col">
 
@@ -251,7 +251,7 @@ tailwind.config = {
       {{-- Eyebrow --}}
       <div class="flex items-center gap-3 mb-7">
         <div class="h-0.5 w-8 sm:w-14 bg-red-500 flex-shrink-0"></div>
-        <span class="text-[10px] tracking-[0.18em] sm:tracking-[0.35em] uppercase text-red-400 font-semibold leading-relaxed hero-sub-shadow">Est. 1996 &nbsp;Â·&nbsp; Bacoor, Cavite &nbsp;Â·&nbsp; Philippines</span>
+        <span class="text-[10px] tracking-[0.18em] sm:tracking-[0.35em] uppercase text-red-400 font-semibold leading-relaxed hero-sub-shadow">Est. 1996 &nbsp;·&nbsp; Bacoor, Cavite &nbsp;·&nbsp; Philippines</span>
       </div>
 
       {{-- Logo identity (shows brand in hero at glance) --}}
@@ -271,7 +271,7 @@ tailwind.config = {
 
       {{-- Description --}}
       <p class="mt-6 text-sm md:text-base lg:text-lg text-white/90 max-w-2xl leading-relaxed hero-sub-shadow">
-        Supplying premium structural steel â€” I-beams, H-beams, MS plates, pipes, sheet piles, rebars, purlins, and more â€” serving contractors and builders across Manila, Calabarzon, Bicol, and the Philippines since 1996.
+        Supplying premium structural steel — I-beams, H-beams, MS plates, pipes, sheet piles, rebars, purlins, and more — serving contractors and builders across Manila, Calabarzon, Bicol, and the Philippines since 1996.
       </p>
 
       {{-- CTA buttons --}}
@@ -312,7 +312,7 @@ tailwind.config = {
     </div>
   </div>
 
-  {{-- Stats bar â€” pinned to bottom of full-screen hero --}}
+  {{-- Stats bar — pinned to bottom of full-screen hero --}}
   <div class="relative bg-black/65 backdrop-blur-sm border-t border-white/10">
     <div class="container mx-auto px-4 sm:px-6">
       <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
@@ -352,7 +352,7 @@ tailwind.config = {
 <div class="w-full bg-gray-100 border-b border-gray-200 overflow-hidden">
   <a href="#products">
     <img src="{{ asset('images/brand-banner.jpg') }}"
-         alt="Southern Mega Steel Enterprise Inc. â€” Your Steel Solution Provider"
+         alt="Southern Mega Steel Enterprise Inc. — Your Steel Solution Provider"
          class="w-full object-contain max-h-[180px] block mx-auto"
          style="max-width:1400px;">
   </a>
@@ -362,42 +362,42 @@ tailwind.config = {
 <div class="bg-gray-950 text-white/55 py-3.5 overflow-hidden border-b border-white/5">
   <div class="flex gap-14 animate-marquee whitespace-nowrap font-display tracking-widest text-base">
     <span class="flex items-center gap-14 flex-shrink-0">
-      <span>I-BEAM</span><span class="text-red-600">â—</span>
-      <span>H-BEAM</span><span class="text-red-600">â—</span>
-      <span>WIDE FLANGE</span><span class="text-red-600">â—</span>
-      <span>MS PLATE</span><span class="text-red-600">â—</span>
-      <span>CHEQUERED PLATE</span><span class="text-red-600">â—</span>
-      <span>WELDED STEEL PIPES</span><span class="text-red-600">â—</span>
-      <span>SEAMLESS PIPES</span><span class="text-red-600">â—</span>
-      <span>SHEET PILE</span><span class="text-red-600">â—</span>
-      <span>DEFORMED BAR</span><span class="text-red-600">â—</span>
-      <span>PLAIN ROUND BAR</span><span class="text-red-600">â—</span>
-      <span>C-Z PURLINS</span><span class="text-red-600">â—</span>
-      <span>CHANNEL BAR</span><span class="text-red-600">â—</span>
-      <span>ANGLE BAR</span><span class="text-red-600">â—</span>
-      <span>STEEL DECKING</span><span class="text-red-600">â—</span>
-      <span>STEEL MATTING</span><span class="text-red-600">â—</span>
-      <span>SQUARE &amp; RECT. TUBING</span><span class="text-red-600">â—</span>
-      <span>SHEETS &amp; COILS</span><span class="text-red-600">â—</span>
+      <span>I-BEAM</span><span class="text-red-600">●</span>
+      <span>H-BEAM</span><span class="text-red-600">●</span>
+      <span>WIDE FLANGE</span><span class="text-red-600">●</span>
+      <span>MS PLATE</span><span class="text-red-600">●</span>
+      <span>CHEQUERED PLATE</span><span class="text-red-600">●</span>
+      <span>WELDED STEEL PIPES</span><span class="text-red-600">●</span>
+      <span>SEAMLESS PIPES</span><span class="text-red-600">●</span>
+      <span>SHEET PILE</span><span class="text-red-600">●</span>
+      <span>DEFORMED BAR</span><span class="text-red-600">●</span>
+      <span>PLAIN ROUND BAR</span><span class="text-red-600">●</span>
+      <span>C-Z PURLINS</span><span class="text-red-600">●</span>
+      <span>CHANNEL BAR</span><span class="text-red-600">●</span>
+      <span>ANGLE BAR</span><span class="text-red-600">●</span>
+      <span>STEEL DECKING</span><span class="text-red-600">●</span>
+      <span>STEEL MATTING</span><span class="text-red-600">●</span>
+      <span>SQUARE &amp; RECT. TUBING</span><span class="text-red-600">●</span>
+      <span>SHEETS &amp; COILS</span><span class="text-red-600">●</span>
     </span>
     <span class="flex items-center gap-14 flex-shrink-0" aria-hidden="true">
-      <span>I-BEAM</span><span class="text-red-600">â—</span>
-      <span>H-BEAM</span><span class="text-red-600">â—</span>
-      <span>WIDE FLANGE</span><span class="text-red-600">â—</span>
-      <span>MS PLATE</span><span class="text-red-600">â—</span>
-      <span>CHEQUERED PLATE</span><span class="text-red-600">â—</span>
-      <span>WELDED STEEL PIPES</span><span class="text-red-600">â—</span>
-      <span>SEAMLESS PIPES</span><span class="text-red-600">â—</span>
-      <span>SHEET PILE</span><span class="text-red-600">â—</span>
-      <span>DEFORMED BAR</span><span class="text-red-600">â—</span>
-      <span>PLAIN ROUND BAR</span><span class="text-red-600">â—</span>
-      <span>C-Z PURLINS</span><span class="text-red-600">â—</span>
-      <span>CHANNEL BAR</span><span class="text-red-600">â—</span>
-      <span>ANGLE BAR</span><span class="text-red-600">â—</span>
-      <span>STEEL DECKING</span><span class="text-red-600">â—</span>
-      <span>STEEL MATTING</span><span class="text-red-600">â—</span>
-      <span>SQUARE &amp; RECT. TUBING</span><span class="text-red-600">â—</span>
-      <span>SHEETS &amp; COILS</span><span class="text-red-600">â—</span>
+      <span>I-BEAM</span><span class="text-red-600">●</span>
+      <span>H-BEAM</span><span class="text-red-600">●</span>
+      <span>WIDE FLANGE</span><span class="text-red-600">●</span>
+      <span>MS PLATE</span><span class="text-red-600">●</span>
+      <span>CHEQUERED PLATE</span><span class="text-red-600">●</span>
+      <span>WELDED STEEL PIPES</span><span class="text-red-600">●</span>
+      <span>SEAMLESS PIPES</span><span class="text-red-600">●</span>
+      <span>SHEET PILE</span><span class="text-red-600">●</span>
+      <span>DEFORMED BAR</span><span class="text-red-600">●</span>
+      <span>PLAIN ROUND BAR</span><span class="text-red-600">●</span>
+      <span>C-Z PURLINS</span><span class="text-red-600">●</span>
+      <span>CHANNEL BAR</span><span class="text-red-600">●</span>
+      <span>ANGLE BAR</span><span class="text-red-600">●</span>
+      <span>STEEL DECKING</span><span class="text-red-600">●</span>
+      <span>STEEL MATTING</span><span class="text-red-600">●</span>
+      <span>SQUARE &amp; RECT. TUBING</span><span class="text-red-600">●</span>
+      <span>SHEETS &amp; COILS</span><span class="text-red-600">●</span>
     </span>
   </div>
 </div>
@@ -455,7 +455,7 @@ tailwind.config = {
           Southern Mega Steel Enterprise Incorporated was established in <strong>1996</strong> in a small office in Imus, Cavite, with a dream to provide quality and standard steel products across the Philippines at an affordable price. Today, operating from <strong>Bacoor, Cavite</strong>, we have grown into a premier steel supplier trusted by contractors, builders, and developers nationwide.
         </p>
         <p class="mt-4 text-gray-600 leading-relaxed">
-          We ensure that all products conform to international standards â€” guaranteeing superior efficiency, safety, stability, and product excellence. From Manila to Mindanao, our comprehensive range of structural steel solutions powers construction projects of every scale.
+          We ensure that all products conform to international standards — guaranteeing superior efficiency, safety, stability, and product excellence. From Manila to Mindanao, our comprehensive range of structural steel solutions powers construction projects of every scale.
         </p>
         <div class="mt-8 grid grid-cols-2 gap-4">
           <div class="border-l-2 border-red-800 pl-4">
@@ -487,7 +487,7 @@ tailwind.config = {
             <div class="relative z-10">
               <div class="font-display text-4xl sm:text-5xl md:text-6xl text-red-600 mb-1">OUR MISSION</div>
               <p class="text-gray-300 leading-relaxed mt-4">
-                To be the Philippines' most reliable steel supplier â€” delivering premium products on time, every time, with unmatched service and integrity.
+                To be the Philippines' most reliable steel supplier — delivering premium products on time, every time, with unmatched service and integrity.
               </p>
               <div class="mt-8 pt-8 border-t border-white/10">
                 <div class="font-display text-4xl sm:text-5xl md:text-6xl text-red-600 mb-1">OUR VISION</div>
@@ -511,28 +511,28 @@ tailwind.config = {
 
 
 <!-- ================================================================
-     PRODUCTS â€” with detail modal
+     PRODUCTS — with detail modal
 ================================================================ -->
 @php
 $products = [
   ['name'=>'I-Beam','img'=>'i-beam.jpg','select'=>'I-Beam',
    'icon'=>'M4 4h2v16H4V4zm7 0h2v16h-2V4zm7 0h2v16h-2V4z',
    'desc'=>'Standard I-section structural steel for beams, columns, and girders in buildings and bridges.',
-   'spec_hdr'=>'Depth Ã— Flange','specs'=>[['size'=>'3"Ã—1.89"','w'=>'4.3'],['size'=>'4"Ã—2.66"','w'=>'6.7'],['size'=>'5"Ã—3"','w'=>'10.0'],['size'=>'6"Ã—3.33"','w'=>'12.5'],['size'=>'8"Ã—4"','w'=>'18.4'],['size'=>'10"Ã—4.75"','w'=>'25.4'],['size'=>'12"Ã—5"','w'=>'31.8']],
+   'spec_hdr'=>'Depth × Flange','specs'=>[['size'=>'3"×1.89"','w'=>'4.3'],['size'=>'4"×2.66"','w'=>'6.7'],['size'=>'5"×3"','w'=>'10.0'],['size'=>'6"×3.33"','w'=>'12.5'],['size'=>'8"×4"','w'=>'18.4'],['size'=>'10"×4.75"','w'=>'25.4'],['size'=>'12"×5"','w'=>'31.8']],
    'lengths'=>['6m'],'uses'=>['Building beams & girders','Mezzanine floor framing','Bridge construction','Industrial structures'],
    'note'=>'S-shape (American Standard). PNS / ASTM A36.'],
 
   ['name'=>'H-Beam','img'=>'h-beam.jpg','select'=>'H-Beam',
    'icon'=>'M3 5h18v2H3V5zm0 6h18v2H3v-2zm0 6h18v2H3v-2z',
    'desc'=>'Wide H-section beams used in heavy structural applications including columns, piles, and composite construction.',
-   'spec_hdr'=>'H Ã— B (mm)','specs'=>[['size'=>'100Ã—100','w'=>'17.2'],['size'=>'125Ã—125','w'=>'23.8'],['size'=>'150Ã—150','w'=>'31.1'],['size'=>'175Ã—175','w'=>'40.3'],['size'=>'200Ã—200','w'=>'49.9'],['size'=>'250Ã—250','w'=>'72.4']],
+   'spec_hdr'=>'H × B (mm)','specs'=>[['size'=>'100×100','w'=>'17.2'],['size'=>'125×125','w'=>'23.8'],['size'=>'150×150','w'=>'31.1'],['size'=>'175×175','w'=>'40.3'],['size'=>'200×200','w'=>'49.9'],['size'=>'250×250','w'=>'72.4']],
    'lengths'=>['6m','9m','12m'],'uses'=>['Columns','Heavy load-bearing','Industrial buildings','Bridge girders'],
    'note'=>'Grade SS400 / A36. Cut-to-length available.'],
 
   ['name'=>'Wide Flange','img'=>'wide-flange.jpg','select'=>'Wide Flange',
    'icon'=>'M4 3h4v18H4V3zm6 0h4v18h-4V3zm6 0h4v18h-4V3z',
    'desc'=>'H-shaped wide flange sections providing superior load distribution and bending resistance for structural frames.',
-   'spec_hdr'=>'Designation','specs'=>[['size'=>'W4Ã—13','w'=>'19.3'],['size'=>'W5Ã—16','w'=>'23.8'],['size'=>'W6Ã—20','w'=>'29.8'],['size'=>'W8Ã—24','w'=>'35.7'],['size'=>'W10Ã—30','w'=>'44.6'],['size'=>'W12Ã—40','w'=>'59.5']],
+   'spec_hdr'=>'Designation','specs'=>[['size'=>'W4×13','w'=>'19.3'],['size'=>'W5×16','w'=>'23.8'],['size'=>'W6×20','w'=>'29.8'],['size'=>'W8×24','w'=>'35.7'],['size'=>'W10×30','w'=>'44.6'],['size'=>'W12×40','w'=>'59.5']],
    'lengths'=>['6m','9m','12m'],'uses'=>['Structural frames','Column-beam connections','Heavy-duty supports'],
    'note'=>'AISC / PNS standard. Grade A36 / A992.'],
 
@@ -541,37 +541,37 @@ $products = [
    'desc'=>'Flat mild steel plates in a wide range of thicknesses for fabrication, base plates, gussets, and general construction.',
    'spec_hdr'=>null,'specs'=>null,
    'sizes'=>['1.5mm','2mm','3mm','4.5mm','6mm','8mm','10mm','12mm','16mm','19mm','25mm'],
-   'sheet_sizes'=>["4'Ã—8' (1219Ã—2438mm)","5'Ã—10' (1524Ã—3048mm)","6'Ã—20' (1829Ã—6096mm)"],
+   'sheet_sizes'=>["4'×8' (1219×2438mm)","5'×10' (1524×3048mm)","6'×20' (1829×6096mm)"],
    'lengths'=>null,'uses'=>['Base & gusset plates','Equipment platforms','Fabrication','Structural connections'],
    'note'=>'Hot-rolled mild steel. Grade A36 / SS400.'],
 
   ['name'=>'Chequered Plate','img'=>'chequered-plate.jpg','select'=>'Chequered Plate',
    'icon'=>'M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z',
-   'desc'=>'Raised-pattern mild steel plates offering slip resistance â€” ideal for flooring, walkways, ramps, and platforms.',
+   'desc'=>'Raised-pattern mild steel plates offering slip resistance — ideal for flooring, walkways, ramps, and platforms.',
    'spec_hdr'=>null,'specs'=>null,
    'sizes'=>['2mm','2.5mm','3mm','4.5mm','6mm'],
-   'sheet_sizes'=>["4'Ã—8' (1219Ã—2438mm)"],
+   'sheet_sizes'=>["4'×8' (1219×2438mm)"],
    'lengths'=>null,'uses'=>['Industrial flooring','Walkways & ramps','Vehicle platforms','Safety flooring'],
    'note'=>'Diamond raised pattern, slip-resistant surface.'],
 
   ['name'=>'Welded Steel Pipes','img'=>'welded-pipes.jpg','select'=>'Welded Steel Pipes',
    'icon'=>'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z',
    'desc'=>'ERW (electric resistance welded) steel pipes for water, gas, structural columns, and general construction piping.',
-   'spec_hdr'=>'Nominal Size (OD)','specs'=>[['size'=>'1/2" (15mm)','w'=>'1.27'],['size'=>'3/4" (20mm)','w'=>'1.69'],['size'=>'1" (25mm)','w'=>'2.50'],['size'=>'1Â½" (40mm)','w'=>'4.05'],['size'=>'2" (50mm)','w'=>'5.44'],['size'=>'3" (80mm)','w'=>'11.3'],['size'=>'4" (100mm)','w'=>'16.1'],['size'=>'6" (150mm)','w'=>'28.3']],
+   'spec_hdr'=>'Nominal Size (OD)','specs'=>[['size'=>'1/2" (15mm)','w'=>'1.27'],['size'=>'3/4" (20mm)','w'=>'1.69'],['size'=>'1" (25mm)','w'=>'2.50'],['size'=>'1½" (40mm)','w'=>'4.05'],['size'=>'2" (50mm)','w'=>'5.44'],['size'=>'3" (80mm)','w'=>'11.3'],['size'=>'4" (100mm)','w'=>'16.1'],['size'=>'6" (150mm)','w'=>'28.3']],
    'lengths'=>['6m'],'uses'=>['Water & gas lines','Structural columns','Scaffolding','Fencing & gates'],
    'note'=>'ERW, Schedule 40. ASTM A53 / PNS.'],
 
   ['name'=>'Seamless Pipes','img'=>'seamless-pipes.jpg','select'=>'Seamless Pipes',
    'icon'=>'M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zm0 2c4.97 0 9 4.03 9 9s-4.03 9-9 9-9-4.03-9-9 4.03-9 9-9z',
    'desc'=>'High-pressure seamless steel pipes for oil & gas, mechanical, boiler, and structural applications requiring high integrity.',
-   'spec_hdr'=>'Nominal Size (OD)','specs'=>[['size'=>'1" (25mm)','w'=>'2.50'],['size'=>'1Â½" (40mm)','w'=>'4.05'],['size'=>'2" (50mm)','w'=>'5.44'],['size'=>'3" (80mm)','w'=>'11.3'],['size'=>'4" (100mm)','w'=>'16.1'],['size'=>'6" (150mm)','w'=>'28.3']],
+   'spec_hdr'=>'Nominal Size (OD)','specs'=>[['size'=>'1" (25mm)','w'=>'2.50'],['size'=>'1½" (40mm)','w'=>'4.05'],['size'=>'2" (50mm)','w'=>'5.44'],['size'=>'3" (80mm)','w'=>'11.3'],['size'=>'4" (100mm)','w'=>'16.1'],['size'=>'6" (150mm)','w'=>'28.3']],
    'lengths'=>['6m','9m'],'uses'=>['Oil & gas lines','High-pressure systems','Boiler piping','Hydraulic systems'],
    'note'=>'Hot-finished, Sch 40/80. ASTM A106 / API 5L.'],
 
   ['name'=>'Square & Rect. Tubing','img'=>'square-tubing.jpg','select'=>'Square & Rectangular Tubing',
    'icon'=>'M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z',
    'desc'=>'Square and rectangular hollow steel sections (HSS) for columns, trusses, frames, gates, and architectural metalwork.',
-   'spec_hdr'=>'Size Ã— Wall Thickness','specs'=>[['size'=>'1"Ã—1"Ã—1.5mm','w'=>'0.89'],['size'=>'1Â½"Ã—1Â½"Ã—1.5mm','w'=>'1.37'],['size'=>'2"Ã—2"Ã—1.5mm','w'=>'1.87'],['size'=>'2"Ã—4"Ã—2mm','w'=>'3.73'],['size'=>'3"Ã—3"Ã—2mm','w'=>'4.64'],['size'=>'4"Ã—4"Ã—2mm','w'=>'6.28']],
+   'spec_hdr'=>'Size × Wall Thickness','specs'=>[['size'=>'1"×1"×1.5mm','w'=>'0.89'],['size'=>'1½"×1½"×1.5mm','w'=>'1.37'],['size'=>'2"×2"×1.5mm','w'=>'1.87'],['size'=>'2"×4"×2mm','w'=>'3.73'],['size'=>'3"×3"×2mm','w'=>'4.64'],['size'=>'4"×4"×2mm','w'=>'6.28']],
    'lengths'=>['6m'],'uses'=>['Columns & posts','Trusses & frames','Gates & grilles','Furniture & fixtures'],
    'note'=>'Cold-formed ERW. Grade SS400.'],
 
@@ -588,15 +588,15 @@ $products = [
    'icon'=>'M3 9h18v6H3V9zm0-6h18v4H3V3zm0 12h18v4H3v-4z',
    'desc'=>'Hot-rolled and cold-rolled steel sheets and coils for fabrication, roofing, cladding, and industrial manufacturing.',
    'spec_hdr'=>null,'specs'=>null,
-   'sizes'=>['HR: 2mm Â· 2.5mm Â· 3mm Â· 4mm Â· 5mm Â· 6mm','CR: 0.4mm Â· 0.6mm Â· 0.8mm Â· 1.0mm Â· 1.2mm Â· 1.5mm Â· 2mm'],
-   'sheet_sizes'=>["4'Ã—8'","5'Ã—10'","Coil form available"],
+   'sizes'=>['HR: 2mm · 2.5mm · 3mm · 4mm · 5mm · 6mm','CR: 0.4mm · 0.6mm · 0.8mm · 1.0mm · 1.2mm · 1.5mm · 2mm'],
+   'sheet_sizes'=>["4'×8'","5'×10'","Coil form available"],
    'lengths'=>null,'uses'=>['Roofing & cladding','Fabrication works','Automotive & appliance','Industrial manufacturing'],
    'note'=>'HR (hot-rolled) & CR (cold-rolled). ASTM A36 / A1008.'],
 
   ['name'=>'Deformed Bar (Rebar)','img'=>'deformed-bar.jpg','select'=>'Deformed Bar (Rebar)',
    'icon'=>'M4 11h16v2H4v-2zm-1-5h18v2H3V6zm2 10h14v2H5v-2z',
-   'desc'=>'Ribbed high-yield reinforcing bars (Grade 40/60) for reinforced concrete structures â€” columns, beams, slabs, footings.',
-   'spec_hdr'=>'Diameter & Grade','specs'=>[['size'=>'10mm â€” Gr.40','w'=>'0.617'],['size'=>'12mm â€” Gr.40','w'=>'0.888'],['size'=>'16mm â€” Gr.60','w'=>'1.580'],['size'=>'20mm â€” Gr.60','w'=>'2.470'],['size'=>'25mm â€” Gr.60','w'=>'3.850'],['size'=>'28mm â€” Gr.60','w'=>'4.830'],['size'=>'32mm â€” Gr.60','w'=>'6.310']],
+   'desc'=>'Ribbed high-yield reinforcing bars (Grade 40/60) for reinforced concrete structures — columns, beams, slabs, footings.',
+   'spec_hdr'=>'Diameter & Grade','specs'=>[['size'=>'10mm — Gr.40','w'=>'0.617'],['size'=>'12mm — Gr.40','w'=>'0.888'],['size'=>'16mm — Gr.60','w'=>'1.580'],['size'=>'20mm — Gr.60','w'=>'2.470'],['size'=>'25mm — Gr.60','w'=>'3.850'],['size'=>'28mm — Gr.60','w'=>'4.830'],['size'=>'32mm — Gr.60','w'=>'6.310']],
    'lengths'=>['6m','9m','12m'],'uses'=>['Concrete columns','Beams & slabs','Footings & piles','Road pavement'],
    'note'=>'PNS 49 / ASTM A615. Grade 40 (275MPa) & Grade 60 (415MPa).'],
 
@@ -610,21 +610,21 @@ $products = [
   ['name'=>'Channel Bar','img'=>'channel-bar.jpg','select'=>'Channel Bar',
    'icon'=>'M5 3h14v4H9v10h10v4H5V3z',
    'desc'=>'C-channel (U-channel) structural steel sections for beams, purlins, framing, and equipment support structures.',
-   'spec_hdr'=>'H Ã— B (mm)','specs'=>[['size'=>'75Ã—40','w'=>'5.58'],['size'=>'100Ã—50','w'=>'8.07'],['size'=>'125Ã—65','w'=>'12.5'],['size'=>'150Ã—65','w'=>'15.2'],['size'=>'180Ã—70','w'=>'18.8'],['size'=>'200Ã—75','w'=>'22.4']],
+   'spec_hdr'=>'H × B (mm)','specs'=>[['size'=>'75×40','w'=>'5.58'],['size'=>'100×50','w'=>'8.07'],['size'=>'125×65','w'=>'12.5'],['size'=>'150×65','w'=>'15.2'],['size'=>'180×70','w'=>'18.8'],['size'=>'200×75','w'=>'22.4']],
    'lengths'=>['6m'],'uses'=>['Beams & lintels','Equipment supports','Framing & bracing','Conveyor rails'],
    'note'=>'Hot-rolled C-channel. Grade A36 / SS400.'],
 
   ['name'=>'C-Z Purlins','img'=>'cz-purlins.jpg','select'=>'C-Z Purlins',
    'icon'=>'M3 4h18v4H3V4zm4 8h14v4H7v-4zm-4 8h18v4H3v-4z',
    'desc'=>'Lightweight cold-formed C and Z steel purlins for roof and wall framing in pre-engineered buildings and steel structures.',
-   'spec_hdr'=>'Section Ã— Thickness','specs'=>[['size'=>'C75Ã—45mm, 1.5mm','w'=>'1.50'],['size'=>'C100Ã—50mm, 1.5mm','w'=>'1.90'],['size'=>'C150Ã—65mm, 2.0mm','w'=>'3.80'],['size'=>'C200Ã—65mm, 2.5mm','w'=>'5.50'],['size'=>'Z150Ã—65mm, 2.0mm','w'=>'4.00'],['size'=>'Z200Ã—65mm, 2.5mm','w'=>'5.80']],
+   'spec_hdr'=>'Section × Thickness','specs'=>[['size'=>'C75×45mm, 1.5mm','w'=>'1.50'],['size'=>'C100×50mm, 1.5mm','w'=>'1.90'],['size'=>'C150×65mm, 2.0mm','w'=>'3.80'],['size'=>'C200×65mm, 2.5mm','w'=>'5.50'],['size'=>'Z150×65mm, 2.0mm','w'=>'4.00'],['size'=>'Z200×65mm, 2.5mm','w'=>'5.80']],
    'lengths'=>['6m'],'uses'=>['Roof purlins','Wall girts','Pre-engineered buildings','Steel warehouse framing'],
    'note'=>'Cold-formed. Galvanized or bare. G550 / A36.'],
 
   ['name'=>'Angle Bar','img'=>'angle-bar.jpg','select'=>'Angle Bar',
    'icon'=>'M3 3h8v18H3V3zm2 2v14h4V5H5zm8 14h8v2h-8v-2z',
    'desc'=>'L-shaped equal and unequal leg steel angles for bracing, frames, brackets, shelving, and general structural fabrication.',
-   'spec_hdr'=>'L Ã— L Ã— Thickness','specs'=>[['size'=>'25Ã—25Ã—3mm','w'=>'1.12'],['size'=>'30Ã—30Ã—3mm','w'=>'1.36'],['size'=>'40Ã—40Ã—4mm','w'=>'2.42'],['size'=>'50Ã—50Ã—5mm','w'=>'3.77'],['size'=>'65Ã—65Ã—6mm','w'=>'5.91'],['size'=>'75Ã—75Ã—6mm','w'=>'6.85'],['size'=>'100Ã—100Ã—8mm','w'=>'12.2']],
+   'spec_hdr'=>'L × L × Thickness','specs'=>[['size'=>'25×25×3mm','w'=>'1.12'],['size'=>'30×30×3mm','w'=>'1.36'],['size'=>'40×40×4mm','w'=>'2.42'],['size'=>'50×50×5mm','w'=>'3.77'],['size'=>'65×65×6mm','w'=>'5.91'],['size'=>'75×75×6mm','w'=>'6.85'],['size'=>'100×100×8mm','w'=>'12.2']],
    'lengths'=>['6m'],'uses'=>['Bracing & supports','Shelving frames','Brackets & clips','Handrail posts'],
    'note'=>'Equal leg angles, hot-rolled. Grade A36 / SS400.'],
 
@@ -632,7 +632,7 @@ $products = [
    'icon'=>'M3 5h18v2H3V5zm0 4h18v2H3V9zm0 4h18v2H3v-2zm0 4h18v2H3v-2z',
    'desc'=>'Corrugated steel deck panels used as permanent formwork and structural floor decking for composite concrete slab systems.',
    'spec_hdr'=>null,'specs'=>null,
-   'sizes'=>['0.8mm Ã— 50mm profile','1.0mm Ã— 50mm profile','1.2mm Ã— 76mm profile','1.5mm Ã— 76mm profile'],
+   'sizes'=>['0.8mm × 50mm profile','1.0mm × 50mm profile','1.2mm × 76mm profile','1.5mm × 76mm profile'],
    'sheet_sizes'=>['600mm coverage width','900mm coverage width'],
    'lengths'=>['Custom cut lengths'],'uses'=>['Composite floor slabs','Roof decking','Permanent formwork','Industrial flooring'],
    'note'=>'Galvanized, structural grade. ASC profiles.'],
@@ -641,8 +641,8 @@ $products = [
    'icon'=>'M3 3h18v2H3V3zm0 4h18v2H3V7zm0 4h18v2H3v-2zm0 4h18v2H3v-2zm0 4h18v2H3v-2zM3 3v18h2V3H3zm4 0v18h2V3H7zm4 0v18h2V3h-2zm4 0v18h2V3h-2zm4 0v18h2V3h-2z',
    'desc'=>'Welded wire mesh (WWM) steel matting for concrete slab reinforcement, walls, and road pavement applications.',
    'spec_hdr'=>null,'specs'=>null,
-   'sizes'=>['4mm wire, 150Ã—150mm grid','5mm wire, 150Ã—150mm grid','6mm wire, 200Ã—200mm grid','8mm wire, 200Ã—200mm grid'],
-   'sheet_sizes'=>['2.4m Ã— 6.0m sheets','1.2m Ã— 2.4m sheets'],
+   'sizes'=>['4mm wire, 150×150mm grid','5mm wire, 150×150mm grid','6mm wire, 200×200mm grid','8mm wire, 200×200mm grid'],
+   'sheet_sizes'=>['2.4m × 6.0m sheets','1.2m × 2.4m sheets'],
    'lengths'=>null,'uses'=>['Concrete slab reinforcement','Road pavement','Wall mesh','Precast elements'],
    'note'=>'Welded wire mesh (WWM). PNS 49 compliant.'],
 ];
@@ -774,7 +774,7 @@ document.addEventListener('alpine:init', () => {
     </div>
   </div>
 
-  {{-- â”€â”€ Product Detail Modal â”€â”€ --}}
+  {{-- ── Product Detail Modal ── --}}
   <div x-show="modal"
        x-transition:enter="transition ease-out duration-200"
        x-transition:enter-start="opacity-0"
@@ -926,7 +926,7 @@ document.addEventListener('alpine:init', () => {
 
 
 <!-- ================================================================
-     PROJECT GALLERY  â€” with lightbox
+     PROJECT GALLERY  — with lightbox
 ================================================================ -->
 @php
 $gallery = [
@@ -971,7 +971,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
         OUR STEEL <span class="text-red-500">BUILT THIS</span>
       </h2>
       <p class="mt-4 text-gray-400 max-w-xl mx-auto">
-        From residential buildings to commercial towers and infrastructure â€” our structural steel is at the core of projects across the Philippines.
+        From residential buildings to commercial towers and infrastructure — our structural steel is at the core of projects across the Philippines.
       </p>
     </div>
 
@@ -1011,12 +1011,12 @@ $galleryJson = json_encode(array_map(fn($g) => [
     <div class="mt-10 text-center reveal">
       <a href="https://www.facebook.com/southernmegasteel/photos" target="_blank" rel="noopener"
          class="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white hover:bg-white/10 px-7 py-3 text-sm font-semibold tracking-wider transition-all">
-        SEE MORE ON FACEBOOK â†—
+        SEE MORE ON FACEBOOK ↗
       </a>
     </div>
   </div>
 
-  {{-- â”€â”€ Lightbox overlay â”€â”€ --}}
+  {{-- ── Lightbox overlay ── --}}
   <div x-show="open"
        x-transition:enter="transition ease-out duration-200"
        x-transition:enter-start="opacity-0"
@@ -1054,7 +1054,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
                class="max-h-[78vh] max-w-full mx-auto object-contain shadow-2xl">
           <div class="mt-5 flex items-center justify-center gap-3">
             <span class="font-display text-lg text-white tracking-wider" x-text="img.label"></span>
-            <span class="text-red-400 text-sm" x-text="'Â· ' + img.loc"></span>
+            <span class="text-red-400 text-sm" x-text="'· ' + img.loc"></span>
           </div>
           <div class="mt-3 text-xs text-white/40" x-text="(i + 1) + ' / ' + images.length"></div>
         </div>
@@ -1102,7 +1102,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
           COMPREHENSIVE<br><span class="text-red-800">STEEL SERVICES</span>
         </h2>
         <p class="mt-6 text-gray-600 leading-relaxed max-w-md">
-          Beyond supplying steel, we provide end-to-end support â€” from specification advice to last-mile delivery â€” so your project runs without delay.
+          Beyond supplying steel, we provide end-to-end support — from specification advice to last-mile delivery — so your project runs without delay.
         </p>
         <a href="#contact" class="mt-8 inline-flex items-center gap-2 bg-red-800 hover:bg-red-900 text-white px-7 py-3.5 font-semibold text-sm tracking-wider transition-all">
           TALK TO US
@@ -1144,7 +1144,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
           ],
           [
             'title' => 'Project Sourcing',
-            'desc'  => 'One-call sourcing for complete project steel lists â€” saving you time, cost, and coordination effort.',
+            'desc'  => 'One-call sourcing for complete project steel lists — saving you time, cost, and coordination effort.',
             'num'   => '06',
           ],
         ];
@@ -1222,7 +1222,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
         ],
         [
           'title' => 'Fast Quote Turnaround',
-          'desc'  => 'Submit your material list and receive a detailed quotation within 24 hours â€” no waiting, no hassle.',
+          'desc'  => 'Submit your material list and receive a detailed quotation within 24 hours — no waiting, no hassle.',
           'icon'  => 'M13 10V3L4 14h7v7l9-11h-7z',
         ],
       ];
@@ -1265,7 +1265,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-5 reveal">
       @php
       $certs = [
-        ['icon'=>'âš™ï¸','code'=>'PNS','label'=>'Philippine National Standard','color'=>'red'],
+        ['icon'=>'⚙️','code'=>'PNS','label'=>'Philippine National Standard','color'=>'red'],
         ['icon'=>'ðŸ—ï¸','code'=>'DPWH','label'=>'Accredited DPWH Supplier','color'=>'blue'],
         ['icon'=>'ðŸ…','code'=>'ISO','label'=>'ISO 9001 Quality Management','color'=>'amber'],
         ['icon'=>'ðŸ”¬','code'=>'BPS','label'=>'Bureau of Product Standards','color'=>'green'],
@@ -1392,7 +1392,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
           'company' => 'MDC Builders & Developers',
           'location'=> 'Metro Manila',
           'rating'  => 5,
-          'text'    => 'Responsive team, complete product line, and they deliver even to our Laguna project site without issues. Ang bilis pa ng quotation â€” 24 hours palagi.',
+          'text'    => 'Responsive team, complete product line, and they deliver even to our Laguna project site without issues. Ang bilis pa ng quotation — 24 hours palagi.',
           'product' => 'MS Plate & Angle Bar',
         ],
         [
@@ -1419,7 +1419,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
         <div class="mt-6 pt-6 border-t border-gray-100 flex items-center justify-between">
           <div>
             <div class="font-semibold text-sm text-gray-900">{{ $t['name'] }}</div>
-            <div class="text-xs text-gray-500">{{ $t['company'] }} Â· {{ $t['location'] }}</div>
+            <div class="text-xs text-gray-500">{{ $t['company'] }} · {{ $t['location'] }}</div>
           </div>
           <div class="text-[10px] text-red-700 font-semibold tracking-wider uppercase bg-red-50 px-2 py-1">{{ $t['product'] }}</div>
         </div>
@@ -1447,7 +1447,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
         WE DELIVER <span class="text-red-500">NATIONWIDE</span>
       </h2>
       <p class="mt-4 text-gray-400 max-w-xl mx-auto">
-        From our warehouse in Bacoor, Cavite â€” we reach every major region across Luzon, Visayas, and Mindanao.
+        From our warehouse in Bacoor, Cavite — we reach every major region across Luzon, Visayas, and Mindanao.
       </p>
     </div>
 
@@ -1489,7 +1489,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
               <polygon points="90,390 75,400 60,420 58,445 70,455 85,445 88,425 90,405" fill="#34d399" opacity="0.7" stroke="#065f46" stroke-width="1"/>
             </g>
 
-            {{-- Location pin â€” Bacoor, Cavite --}}
+            {{-- Location pin — Bacoor, Cavite --}}
             <g transform="translate(97,133)">
               <circle cx="0" cy="0" r="6" fill="#ef4444" stroke="white" stroke-width="2"/>
               <circle cx="0" cy="0" r="10" fill="#ef4444" opacity="0.25"/>
@@ -1518,19 +1518,19 @@ $galleryJson = json_encode(array_map(fn($g) => [
             'island' => 'LUZON',
             'color'  => 'red',
             'areas'  => ['Metro Manila','Cavite (Base)','Laguna','Batangas','Rizal','Quezon','Pampanga','Bulacan','Tarlac','Pangasinan','La Union','Ilocos Norte/Sur','Isabela','Cagayan','Bicol Region'],
-            'eta'    => '1â€“3 business days',
+            'eta'    => '1–3 business days',
           ],
           [
             'island' => 'VISAYAS',
             'color'  => 'yellow',
             'areas'  => ['Cebu City','Iloilo City','Bacolod','Tacloban','Dumaguete','Ormoc','Bohol'],
-            'eta'    => '3â€“5 business days',
+            'eta'    => '3–5 business days',
           ],
           [
             'island' => 'MINDANAO',
             'color'  => 'emerald',
             'areas'  => ['Davao City','Cagayan de Oro','General Santos','Zamboanga','Iligan','Bukidnon','Koronadal'],
-            'eta'    => '5â€“7 business days',
+            'eta'    => '5–7 business days',
           ],
         ];
         $colorMap = ['red'=>'bg-red-500','yellow'=>'bg-yellow-400','emerald'=>'bg-emerald-400'];
@@ -1584,7 +1584,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
           STEEL WEIGHT <span class="text-red-800">CALCULATOR</span>
         </h2>
         <p class="mt-4 text-gray-500 max-w-md mx-auto text-sm">
-          Estimate the weight of your order in seconds. Results are approximate â€” contact us for an exact quote.
+          Estimate the weight of your order in seconds. Results are approximate — contact us for an exact quote.
         </p>
       </div>
 
@@ -1623,7 +1623,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
             <label class="block text-xs font-semibold tracking-widest uppercase text-gray-700 mb-2">Product Type</label>
             <select x-model="type" @change="size=''; result=null"
                     class="form-input w-full border border-gray-300 px-4 py-3 text-sm bg-white">
-              <option value="">Select productâ€¦</option>
+              <option value="">Select product…</option>
               <option value="ibeam">I-Beam</option>
               <option value="wflange">Wide Flange / H-Beam</option>
               <option value="rebar">Deformed Bar (Rebar)</option>
@@ -1635,7 +1635,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
             <label class="block text-xs font-semibold tracking-widest uppercase text-gray-700 mb-2">Size / Section</label>
             <select x-model="size" :disabled="!type" @change="result=null"
                     class="form-input w-full border border-gray-300 px-4 py-3 text-sm bg-white disabled:opacity-40">
-              <option value="">Select sizeâ€¦</option>
+              <option value="">Select size…</option>
               <template x-for="s in sizeOptions" :key="s[0]">
                 <option :value="s[0]" x-text="s[0] + '  (' + s[1] + ' kg/m' + (type==='msplate'?'Â²':'/m') + ')'"></option>
               </template>
@@ -1686,7 +1686,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
           <p class="text-xs text-gray-400 mt-5 text-center">*Theoretical weight based on standard density. Actual weight may vary Â±3%.</p>
           <div class="mt-4 text-center">
             <a href="#inquire" class="text-sm font-semibold text-red-800 hover:underline">
-              â†’ Get an exact quote for this order
+              → Get an exact quote for this order
             </a>
           </div>
         </div>
@@ -1718,11 +1718,11 @@ $galleryJson = json_encode(array_map(fn($g) => [
         $faqs = [
           [
             'q' => 'What is your minimum order quantity (MOQ)?',
-            'a' => 'We generally do not impose a strict MOQ for most products. However, for structural steel items like I-beams, wide flanges, and sheet piles, a minimum of 1 ton is recommended for cost-efficient pricing. Smaller quantities can be accommodated â€” contact us to discuss your specific needs.',
+            'a' => 'We generally do not impose a strict MOQ for most products. However, for structural steel items like I-beams, wide flanges, and sheet piles, a minimum of 1 ton is recommended for cost-efficient pricing. Smaller quantities can be accommodated — contact us to discuss your specific needs.',
           ],
           [
             'q' => 'How long does delivery take after I place an order?',
-            'a' => 'Metro Manila and nearby provinces (Cavite, Laguna, Batangas, Rizal, Pampanga, Bulacan): 1â€“3 business days. Luzon provincial areas: 2â€“5 business days. Visayas: 3â€“5 business days via cargo/shipping. Mindanao: 5â€“7 business days. Lead times may vary depending on order volume and current stock.',
+            'a' => 'Metro Manila and nearby provinces (Cavite, Laguna, Batangas, Rizal, Pampanga, Bulacan): 1–3 business days. Luzon provincial areas: 2–5 business days. Visayas: 3–5 business days via cargo/shipping. Mindanao: 5–7 business days. Lead times may vary depending on order volume and current stock.',
           ],
           [
             'q' => 'Do you deliver to all provinces nationwide?',
@@ -1742,7 +1742,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
           ],
           [
             'q' => 'What sizes and specifications do you normally carry in stock?',
-            'a' => 'We maintain ready stock of the most common structural steel sizes â€” I-beams from S100 to S400, wide flanges from W150 to W400, deformed bars from 10mm to 32mm, angle bars from 25x25 to 100x100, MS plates from 3mm to 25mm, and more. For less common sizes, we can source within 5â€“10 business days.',
+            'a' => 'We maintain ready stock of the most common structural steel sizes — I-beams from S100 to S400, wide flanges from W150 to W400, deformed bars from 10mm to 32mm, angle bars from 25x25 to 100x100, MS plates from 3mm to 25mm, and more. For less common sizes, we can source within 5–10 business days.',
           ],
           [
             'q' => 'How do I request a quotation?',
@@ -1859,7 +1859,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
             <label class="block text-xs font-semibold tracking-widest uppercase text-gray-700 mb-2">Message *</label>
             <textarea name="message" rows="5" required
                       class="form-input w-full border border-gray-300 px-4 py-3 text-sm text-gray-900 bg-white transition-all resize-none"
-                      placeholder="Tell us how we can help youâ€¦"></textarea>
+                      placeholder="Tell us how we can help you…"></textarea>
           </div>
           <button type="submit"
                   class="w-full bg-red-800 hover:bg-red-900 text-white py-4 font-semibold tracking-wider text-sm transition-all duration-200 flex items-center justify-center gap-2">
@@ -1886,7 +1886,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
           </div>
           <div>
             <div class="text-[10px] tracking-[0.3em] uppercase text-gray-500 font-semibold mb-1.5">Hours</div>
-            <div class="text-sm font-medium text-gray-900">Monâ€“Sat Â· 8AMâ€“6PM</div>
+            <div class="text-sm font-medium text-gray-900">Mon–Sat · 8AM–6PM</div>
           </div>
         </div>
       </div>
@@ -1903,7 +1903,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Southern Mega Steel Location â€” 3D Ace Building, Avenida St., Molino 3, Bacoor, Cavite">
+            title="Southern Mega Steel Location — 3D Ace Building, Avenida St., Molino 3, Bacoor, Cavite">
           </iframe>
         </div>
         <div class="bg-red-800 text-white p-5">
@@ -1911,7 +1911,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
           <div class="font-semibold text-sm leading-relaxed">Southern Mega Steel Enterprise Inc.<br>3D Ace Building, Avenida St.<br>Molino 3, Bacoor, Cavite</div>
           <a href="https://maps.google.com/maps?q=Southern+Mega+Steel+Enterprise+Inc,+Avenida+St,+Molino+3,+Bacoor,+Cavite,+Philippines" target="_blank" rel="noopener"
              class="mt-3 inline-flex items-center gap-1.5 text-xs text-red-200 hover:text-white transition-colors font-semibold tracking-wider uppercase">
-            Get Directions â†—
+            Get Directions ↗
           </a>
         </div>
       </div>
@@ -1989,7 +1989,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
             <label class="block text-xs font-semibold tracking-widest uppercase text-gray-700 mb-2">Product of Interest *</label>
             <select name="q_product" required
                     class="form-input w-full border border-gray-300 px-4 py-3 text-sm bg-white transition-all text-gray-900">
-              <option value="" disabled selected>Select a productâ€¦</option>
+              <option value="" disabled selected>Select a product…</option>
               <option>I-Beam</option>
               <option>H-Beam</option>
               <option>Wide Flange</option>
@@ -2030,7 +2030,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
           <label class="block text-xs font-semibold tracking-widest uppercase text-gray-700 mb-2">Project Details / Specifications</label>
           <textarea name="q_details" rows="5"
                     class="form-input w-full border border-gray-300 px-4 py-3 text-sm bg-white transition-all resize-none"
-                    placeholder="Describe your project, required sizes/specs, timeline, or any other detailsâ€¦"></textarea>
+                    placeholder="Describe your project, required sizes/specs, timeline, or any other details…"></textarea>
         </div>
 
         <div class="flex items-start gap-3">
@@ -2138,8 +2138,8 @@ $galleryJson = json_encode(array_map(fn($g) => [
 
         <div class="mt-5 bg-red-800 text-white p-6">
           <div class="text-[10px] tracking-[0.3em] uppercase font-semibold text-red-300 mb-2">Business Hours</div>
-          <div class="font-semibold">Monday â€“ Saturday</div>
-          <div class="text-red-200 text-sm">8:00 AM â€“ 6:00 PM PHT</div>
+          <div class="font-semibold">Monday – Saturday</div>
+          <div class="text-red-200 text-sm">8:00 AM – 6:00 PM PHT</div>
           <div class="mt-3 pt-3 border-t border-red-700">
             <a href="tel:+639310599611" class="text-sm hover:text-red-200 transition-colors">ðŸ“ž 0931 059 9611</a>
           </div>
@@ -2231,7 +2231,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
             <svg class="w-4 h-4 text-red-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
             </svg>
-            <span class="text-sm text-gray-400">Monâ€“Sat Â· 8AMâ€“6PM</span>
+            <span class="text-sm text-gray-400">Mon–Sat · 8AM–6PM</span>
           </li>
         </ul>
       </div>
@@ -2243,7 +2243,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
       </div>
       <div class="flex items-center gap-4 text-xs text-gray-600">
         <a href="{{ route('privacy') }}" class="hover:text-gray-400 transition-colors">Privacy Policy</a>
-        <span class="text-gray-700">Â·</span>
+        <span class="text-gray-700">·</span>
         <span>Your Partner in Steel Excellence</span>
       </div>
     </div>
@@ -2260,7 +2260,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
 
 
 <script>
-  // â”€â”€ Scroll reveal â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Scroll reveal ──────────────────────────────────────────────
   const revealEls = document.querySelectorAll('.reveal');
   const revealObs = new IntersectionObserver(
     (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } }),
@@ -2268,7 +2268,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
   );
   revealEls.forEach(el => revealObs.observe(el));
 
-  // â”€â”€ Animated number counters â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Animated number counters ───────────────────────────────────
   function animateCounter(el) {
     const target = parseInt(el.dataset.target, 10);
     const duration = 1800;
@@ -2291,7 +2291,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
   );
   document.querySelectorAll('.counter').forEach(el => counterObs.observe(el));
 
-  // â”€â”€ Back-to-top visibility â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Back-to-top visibility ─────────────────────────────────────
   const btt = document.getElementById('backToTop');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 400) {
@@ -2303,15 +2303,15 @@ $galleryJson = json_encode(array_map(fn($g) => [
     }
   }, { passive: true });
 
-  // â”€â”€ Preloader â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Preloader ──────────────────────────────────────────────────
   const preloader = document.getElementById('sms-preloader');
   window.addEventListener('load', () => {
     setTimeout(() => preloader.classList.add('hidden'), 300);
   });
-  // Safety fallback â€” hide after 4s regardless
+  // Safety fallback — hide after 4s regardless
   setTimeout(() => preloader.classList.add('hidden'), 4000);
 
-  // â”€â”€ Auto-scroll to flash section after form submit â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Auto-scroll to flash section after form submit ─────────────
   @if(session('contact_success'))
     document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
   @endif
@@ -2321,16 +2321,16 @@ $galleryJson = json_encode(array_map(fn($g) => [
 </script>
 
 <!--
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  ══════════════════════════════════════════════════════════
   TAWK.TO LIVE CHAT
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  ══════════════════════════════════════════════════════════
   SETUP (2 minutes):
   1. Go to https://www.tawk.to and create a free account
-  2. Create a new Property â†’ name it "Southern Mega Steel"
-  3. Go to Administration â†’ Chat Widget â†’ copy your embed code
+  2. Create a new Property → name it "Southern Mega Steel"
+  3. Go to Administration → Chat Widget → copy your embed code
   4. Replace YOUR_PROPERTY_ID and YOUR_WIDGET_ID below
      (looks like: 64abc123abc/1he12abc3)
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  ══════════════════════════════════════════════════════════
 -->
 <script type="text/javascript">
   var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
