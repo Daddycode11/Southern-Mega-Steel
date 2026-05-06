@@ -12,16 +12,17 @@
 <meta property="og:title"       content="Southern Mega Steel Enterprise Inc. — Your Partner in Steel Excellence">
 <meta property="og:description" content="Premium structural steel products, fabrication services, and nationwide delivery. I-Beam, Wide Flange, MS Plate, Rebar, Steel Pipes & more. Est. 1996, Bacoor Cavite.">
 <meta property="og:url"         content="{{ url('/') }}">
-<meta property="og:image"       content="{{ asset('images/hero-banner.jpg') }}">
+<meta property="og:image"       content="{{ asset('images/og-image.jpg') }}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:type"  content="image/jpeg">
 <meta property="og:locale"     content="en_PH">
 
 {{-- Twitter Card --}}
 <meta name="twitter:card"        content="summary_large_image">
 <meta name="twitter:title"       content="Southern Mega Steel Enterprise Inc.">
 <meta name="twitter:description" content="Premium structural steel products & fabrication. Est. 1996, Bacoor Cavite, Philippines.">
-<meta name="twitter:image"       content="{{ asset('images/hero-banner.jpg') }}">
+<meta name="twitter:image"       content="{{ asset('images/og-image.jpg') }}">
 
 {{-- Google Analytics — replace GA_MEASUREMENT_ID with your actual ID --}}
 {{-- e.g. G-XXXXXXXXXX — get it from analytics.google.com --}}
@@ -1818,20 +1819,20 @@ $galleryJson = json_encode(array_map(fn($g) => [
         <div class="flex-1 relative bg-gray-100 overflow-hidden" style="min-height: 380px;">
           {{-- Replace the src below with your actual Google Maps embed URL for your exact address in Bacoor, Cavite --}}
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61862.23!2d120.9499!3d14.4342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d43c8a4a8e9d%3A0x0!2sBacoor%2C+Cavite%2C+Philippines!5e0!3m2!1sen!2sph!4v1700000000000"
+            src="https://maps.google.com/maps?q=Southern+Mega+Steel+Enterprise+Inc,+Avenida+St,+Molino+3,+Bacoor,+Cavite,+Philippines&output=embed"
             width="100%"
             height="100%"
             style="border:0; min-height:380px;"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Southern Mega Steel Location">
+            title="Southern Mega Steel Location — 3D Ace Building, Avenida St., Molino 3, Bacoor, Cavite">
           </iframe>
         </div>
         <div class="bg-red-800 text-white p-5">
           <div class="text-[10px] tracking-[0.3em] uppercase font-semibold text-red-200 mb-1.5">Our Location</div>
-          <div class="font-semibold text-sm leading-relaxed">Southern Mega Steel Enterprise Inc.<br>Bacoor, Cavite, Philippines</div>
-          <a href="https://maps.google.com" target="_blank" rel="noopener"
+          <div class="font-semibold text-sm leading-relaxed">Southern Mega Steel Enterprise Inc.<br>3D Ace Building, Avenida St.<br>Molino 3, Bacoor, Cavite</div>
+          <a href="https://maps.google.com/maps?q=Southern+Mega+Steel+Enterprise+Inc,+Avenida+St,+Molino+3,+Bacoor,+Cavite,+Philippines" target="_blank" rel="noopener"
              class="mt-3 inline-flex items-center gap-1.5 text-xs text-red-200 hover:text-white transition-colors font-semibold tracking-wider uppercase">
             Get Directions ↗
           </a>
