@@ -33,42 +33,10 @@
     <div class="flex items-center justify-between h-[4.5rem]">
 
       {{-- Brand Logo --}}
-      <a href="#home" class="flex items-center gap-3 group flex-shrink-0">
-        <svg width="40" height="48" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-          <defs>
-            <linearGradient id="nb1" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#7f1d1d"/>
-              <stop offset="45%" stop-color="#dc2626"/>
-              <stop offset="100%" stop-color="#991b1b"/>
-            </linearGradient>
-            <linearGradient id="nb2" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#991b1b"/>
-              <stop offset="50%" stop-color="#ef4444"/>
-              <stop offset="100%" stop-color="#b91c1c"/>
-            </linearGradient>
-          </defs>
-          {{-- Left beam --}}
-          <rect x="2" y="4" width="22" height="84" fill="url(#nb1)" rx="2"/>
-          <rect x="5" y="4" width="7" height="84" fill="white" opacity="0.15" rx="1"/>
-          {{-- Middle beam --}}
-          <rect x="39" y="4" width="22" height="84" fill="url(#nb2)" rx="2"/>
-          <rect x="42" y="4" width="7" height="84" fill="white" opacity="0.15" rx="1"/>
-          {{-- Right beam --}}
-          <rect x="76" y="4" width="22" height="84" fill="url(#nb1)" rx="2"/>
-          <rect x="79" y="4" width="7" height="84" fill="white" opacity="0.15" rx="1"/>
-          {{-- Connectors --}}
-          <rect x="24" y="26" width="15" height="8" fill="#b91c1c" rx="1"/>
-          <rect x="61" y="26" width="15" height="8" fill="#b91c1c" rx="1"/>
-          <rect x="24" y="54" width="15" height="8" fill="#b91c1c" rx="1"/>
-          <rect x="61" y="54" width="15" height="8" fill="#b91c1c" rx="1"/>
-          {{-- Base --}}
-          <rect x="2" y="88" width="96" height="14" fill="#7f1d1d" rx="2"/>
-          <rect x="2" y="88" width="96" height="5" fill="#b91c1c" rx="2"/>
-        </svg>
-        <div class="leading-none">
-          <div class="font-gothic text-lg text-red-800 leading-tight group-hover:text-red-700 transition-colors">Southern Mega Steel</div>
-          <div class="text-[8px] tracking-[0.2em] uppercase bg-red-800 text-white px-2 py-0.5 mt-0.5 inline-block">Enterprise Inc.</div>
-        </div>
+      <a href="#home" class="flex items-center flex-shrink-0 group">
+        <img src="{{ asset('images/sms-logo.png') }}"
+             alt="Southern Mega Steel Enterprise Inc."
+             class="h-12 w-auto object-contain group-hover:opacity-90 transition-opacity">
       </a>
 
       {{-- Desktop Nav Links --}}

@@ -240,37 +240,10 @@ tailwind.config = {
       </div>
 
       {{-- Logo identity (shows brand in hero at glance) --}}
-      <div class="flex items-center gap-5 mb-10">
-        <svg width="52" height="62" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" class="drop-shadow-2xl flex-shrink-0">
-          <defs>
-            <linearGradient id="hg1" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#7f1d1d"/>
-              <stop offset="45%" stop-color="#dc2626"/>
-              <stop offset="100%" stop-color="#991b1b"/>
-            </linearGradient>
-            <linearGradient id="hg2" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#991b1b"/>
-              <stop offset="50%" stop-color="#ef4444"/>
-              <stop offset="100%" stop-color="#b91c1c"/>
-            </linearGradient>
-          </defs>
-          <rect x="2" y="4" width="22" height="84" fill="url(#hg1)" rx="2"/>
-          <rect x="5" y="4" width="7" height="84" fill="white" opacity="0.2" rx="1"/>
-          <rect x="39" y="4" width="22" height="84" fill="url(#hg2)" rx="2"/>
-          <rect x="42" y="4" width="7" height="84" fill="white" opacity="0.2" rx="1"/>
-          <rect x="76" y="4" width="22" height="84" fill="url(#hg1)" rx="2"/>
-          <rect x="79" y="4" width="7" height="84" fill="white" opacity="0.2" rx="1"/>
-          <rect x="25" y="26" width="14" height="8" fill="#9a1a1a" rx="1"/>
-          <rect x="62" y="26" width="14" height="8" fill="#9a1a1a" rx="1"/>
-          <rect x="25" y="55" width="14" height="8" fill="#9a1a1a" rx="1"/>
-          <rect x="62" y="55" width="14" height="8" fill="#9a1a1a" rx="1"/>
-          <rect x="2" y="88" width="96" height="14" fill="#7f1d1d" rx="2"/>
-          <rect x="2" y="88" width="96" height="5" fill="#b91c1c" opacity="0.6" rx="2"/>
-        </svg>
-        <div class="leading-tight">
-          <div class="font-gothic text-2xl md:text-3xl text-white drop-shadow-lg leading-none">Southern Mega Steel</div>
-          <div class="mt-1.5 inline-block bg-red-700 text-white text-[9px] tracking-[0.22em] uppercase px-3 py-1 font-semibold">Enterprise Incorporated</div>
-        </div>
+      <div class="mb-10">
+        <img src="{{ asset('images/sms-logo.png') }}"
+             alt="Southern Mega Steel Enterprise Incorporated"
+             class="h-20 sm:h-24 w-auto object-contain drop-shadow-2xl">
       </div>
 
       {{-- Main headline --}}
@@ -2095,21 +2068,10 @@ $galleryJson = json_encode(array_map(fn($g) => [
 
       {{-- Brand --}}
       <div class="lg:col-span-1">
-        <div class="flex items-center gap-3 mb-5">
-          <svg width="36" height="44" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2" y="4" width="22" height="84" fill="#dc2626" rx="2"/>
-            <rect x="39" y="4" width="22" height="84" fill="#ef4444" rx="2"/>
-            <rect x="76" y="4" width="22" height="84" fill="#dc2626" rx="2"/>
-            <rect x="24" y="26" width="15" height="8" fill="#9a1a1a" rx="1"/>
-            <rect x="61" y="26" width="15" height="8" fill="#9a1a1a" rx="1"/>
-            <rect x="24" y="55" width="15" height="8" fill="#9a1a1a" rx="1"/>
-            <rect x="61" y="55" width="15" height="8" fill="#9a1a1a" rx="1"/>
-            <rect x="2" y="88" width="96" height="14" fill="#7f1d1d" rx="2"/>
-          </svg>
-          <div class="leading-none">
-            <div class="font-gothic text-base text-red-500">Southern Mega Steel</div>
-            <div class="text-[8px] tracking-[0.2em] uppercase bg-red-800 text-white px-2 py-0.5 mt-0.5 inline-block">Enterprise Inc.</div>
-          </div>
+        <div class="mb-5">
+          <img src="{{ asset('images/sms-logo.png') }}"
+               alt="Southern Mega Steel Enterprise Inc."
+               class="h-16 w-auto object-contain brightness-0 invert">
         </div>
         <p class="text-sm text-gray-400 leading-relaxed max-w-xs">
           Your trusted partner for premium structural steel products in the Philippines.
