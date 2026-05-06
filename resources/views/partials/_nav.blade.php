@@ -30,13 +30,13 @@
      :class="scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200/80' : 'bg-white border-b border-gray-200'"
      class="sticky top-0 z-50 transition-all duration-300">
   <div class="container mx-auto px-6">
-    <div class="flex items-center justify-between h-[4.5rem]">
+    <div class="flex items-center justify-between h-[5.5rem]">
 
       {{-- Brand Logo --}}
       <a href="#home" class="flex items-center flex-shrink-0 group">
         <img src="{{ asset('images/sms-logo.png') }}"
              alt="Southern Mega Steel Enterprise Inc."
-             class="h-12 w-auto object-contain group-hover:opacity-90 transition-opacity">
+             class="h-16 sm:h-[4.5rem] w-auto object-contain group-hover:opacity-90 transition-opacity">
       </a>
 
       {{-- Desktop Nav Links --}}
