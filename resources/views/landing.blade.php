@@ -218,7 +218,7 @@ tailwind.config = {
 
 @include('partials._nav')
 
-<main>
+<main class="pb-20 lg:pb-0">
 
 <!-- ================================================================
      HERO  — full-screen dark-overlay banner
@@ -2274,7 +2274,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
 <!-- Back to top button -->
 <button id="backToTop"
         onclick="window.scrollTo({top:0,behavior:'smooth'})"
-        class="fixed bottom-6 left-5 z-50 w-11 h-11 bg-gray-900/80 hover:bg-red-800 text-white rounded-full
+        class="fixed bottom-20 lg:bottom-6 left-5 z-50 w-11 h-11 bg-gray-900/80 hover:bg-red-800 text-white rounded-full
                flex items-center justify-center shadow-lg transition-all duration-300
                opacity-0 translate-y-4 pointer-events-none"
         aria-label="Back to top">
@@ -2283,7 +2283,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
   </svg>
 </button>
 
-<div class="fixed bottom-6 right-5 z-50 flex flex-col items-end gap-3"
+<div class="fixed bottom-20 lg:bottom-6 right-5 z-50 flex flex-col items-end gap-3"
      x-data="{ shown: false }"
      x-init="setTimeout(() => shown = true, 900)">
 
@@ -2370,6 +2370,55 @@ $galleryJson = json_encode(array_map(fn($g) => [
       </svg>
     </a>
   </div>
+</div>
+
+<!-- ================================================================
+     STICKY MOBILE CTA BAR
+================================================================ -->
+<div class="lg:hidden fixed bottom-0 inset-x-0 z-[500] flex h-16 shadow-[0_-2px_12px_rgba(0,0,0,0.18)]">
+
+  {{-- Call --}}
+  <a href="tel:+639310599611"
+     class="flex-1 flex flex-col items-center justify-center gap-1
+            bg-white border-t-2 border-gray-100 text-green-600
+            hover:bg-green-50 active:bg-green-100 transition-colors select-none">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+    </svg>
+    <span class="text-[10px] font-semibold tracking-wide uppercase leading-none">Call</span>
+  </a>
+
+  {{-- Divider --}}
+  <div class="w-px bg-gray-200 self-stretch"></div>
+
+  {{-- WhatsApp --}}
+  <a href="https://wa.me/639310599611?text=Hi%20Southern%20Mega%20Steel%2C%20I%20would%20like%20to%20inquire%20about%20your%20steel%20products."
+     target="_blank" rel="noopener noreferrer"
+     class="flex-1 flex flex-col items-center justify-center gap-1
+            bg-white border-t-2 border-gray-100
+            hover:bg-green-50 active:bg-green-100 transition-colors select-none"
+     style="color:#25d366;">
+    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.123 1.528 5.855L.057 23.882l6.186-1.438A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.031-1.388l-.36-.214-3.733.868.933-3.625-.235-.372A9.778 9.778 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/>
+    </svg>
+    <span class="text-[10px] font-semibold tracking-wide uppercase leading-none">WhatsApp</span>
+  </a>
+
+  {{-- Divider --}}
+  <div class="w-px bg-gray-200 self-stretch"></div>
+
+  {{-- Get Quote --}}
+  <a href="#inquire"
+     class="flex-1 flex flex-col items-center justify-center gap-1
+            bg-red-800 border-t-2 border-red-900 text-white
+            hover:bg-red-900 active:bg-red-950 transition-colors select-none">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+    </svg>
+    <span class="text-[10px] font-semibold tracking-wide uppercase leading-none">Get Quote</span>
+  </a>
+
 </div>
 
 </body>
