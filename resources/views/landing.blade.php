@@ -96,6 +96,10 @@ tailwind.config = {
   ::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
   ::-webkit-scrollbar-thumb:hover { background: #b91c1c; }
 
+  /* Hero text readability */
+  .hero-text-shadow { text-shadow: 0 2px 16px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.9); }
+  .hero-sub-shadow  { text-shadow: 0 1px 8px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.9); }
+
   /* Hero background image — place file at public/images/hero-banner.jpg */
   .hero-img-bg {
     background-image: url('{{ asset("images/hero-banner.jpg") }}');
@@ -233,10 +237,16 @@ tailwind.config = {
   <div class="relative flex-1 flex items-center">
     <div class="container mx-auto px-6 py-24 lg:py-32">
 
+      {{-- Text content wrapped in subtle dark backdrop for readability --}}
+      <div class="relative max-w-3xl">
+        <div class="absolute -inset-6 sm:-inset-10 bg-gradient-to-r from-black/40 via-black/20 to-transparent rounded-sm pointer-events-none"></div>
+
+        <div class="relative">
+
       {{-- Eyebrow --}}
       <div class="flex items-center gap-3 mb-7">
         <div class="h-0.5 w-8 sm:w-14 bg-red-500 flex-shrink-0"></div>
-        <span class="text-[10px] tracking-[0.18em] sm:tracking-[0.35em] uppercase text-red-400 font-semibold leading-relaxed">Est. 1996 &nbsp;·&nbsp; Bacoor, Cavite &nbsp;·&nbsp; Philippines</span>
+        <span class="text-[10px] tracking-[0.18em] sm:tracking-[0.35em] uppercase text-red-400 font-semibold leading-relaxed hero-sub-shadow">Est. 1996 &nbsp;·&nbsp; Bacoor, Cavite &nbsp;·&nbsp; Philippines</span>
       </div>
 
       {{-- Logo identity (shows brand in hero at glance) --}}
@@ -247,15 +257,15 @@ tailwind.config = {
       </div>
 
       {{-- Main headline --}}
-      <h1 class="font-display leading-none text-white max-w-5xl"
+      <h1 class="font-display leading-none text-white hero-text-shadow"
           style="font-size: clamp(2.2rem, 9vw, 8rem); line-height: 0.92;">
         YOUR PARTNER IN<br>
-        <span class="text-red-500">STEEL</span><br>
+        <span class="text-red-400">STEEL</span><br>
         EXCELLENCE
       </h1>
 
       {{-- Description --}}
-      <p class="mt-6 text-sm md:text-base lg:text-lg text-white/70 max-w-2xl leading-relaxed">
+      <p class="mt-6 text-sm md:text-base lg:text-lg text-white/90 max-w-2xl leading-relaxed hero-sub-shadow">
         Supplying premium structural steel — I-beams, H-beams, MS plates, pipes, sheet piles, rebars, purlins, and more — serving contractors and builders across Manila, Calabarzon, Bicol, and the Philippines since 1996.
       </p>
 
@@ -283,6 +293,9 @@ tailwind.config = {
           DOWNLOAD CATALOG
         </a>
       </div>
+
+        </div>{{-- end relative --}}
+      </div>{{-- end text backdrop wrapper --}}
 
       {{-- Scroll hint --}}
       <div class="mt-16 hidden md:flex items-center gap-3 text-white/30">
