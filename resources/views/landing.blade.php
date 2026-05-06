@@ -234,9 +234,9 @@ tailwind.config = {
     <div class="container mx-auto px-6 py-24 lg:py-32">
 
       {{-- Eyebrow --}}
-      <div class="flex items-center gap-4 mb-7">
-        <div class="h-0.5 w-14 bg-red-500"></div>
-        <span class="text-[11px] tracking-[0.45em] uppercase text-red-400 font-semibold">Est. 1996 &nbsp;·&nbsp; Bacoor, Cavite &nbsp;·&nbsp; Philippines</span>
+      <div class="flex items-center gap-3 mb-7">
+        <div class="h-0.5 w-8 sm:w-14 bg-red-500 flex-shrink-0"></div>
+        <span class="text-[10px] tracking-[0.18em] sm:tracking-[0.35em] uppercase text-red-400 font-semibold leading-relaxed">Est. 1996 &nbsp;·&nbsp; Bacoor, Cavite &nbsp;·&nbsp; Philippines</span>
       </div>
 
       {{-- Logo identity (shows brand in hero at glance) --}}
@@ -275,35 +275,35 @@ tailwind.config = {
 
       {{-- Main headline --}}
       <h1 class="font-display leading-none text-white max-w-5xl"
-          style="font-size: clamp(3rem, 9vw, 8rem); line-height: 0.92;">
+          style="font-size: clamp(2.2rem, 9vw, 8rem); line-height: 0.92;">
         YOUR PARTNER IN<br>
         <span class="text-red-500">STEEL</span><br>
         EXCELLENCE
       </h1>
 
       {{-- Description --}}
-      <p class="mt-8 text-base md:text-lg text-white/70 max-w-2xl leading-relaxed">
+      <p class="mt-6 text-sm md:text-base lg:text-lg text-white/70 max-w-2xl leading-relaxed">
         Supplying premium structural steel — I-beams, H-beams, MS plates, pipes, sheet piles, rebars, purlins, and more — serving contractors and builders across Manila, Calabarzon, Bicol, and the Philippines since 1996.
       </p>
 
       {{-- CTA buttons --}}
-      <div class="mt-10 flex flex-wrap items-center gap-4">
+      <div class="mt-8 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3">
         <a href="#inquire"
-           class="group inline-flex items-center gap-3 bg-red-700 hover:bg-red-600 text-white px-8 py-4 font-semibold tracking-wider text-sm transition-all duration-200 shadow-lg shadow-red-900/40">
+           class="group inline-flex items-center justify-center gap-3 bg-red-700 hover:bg-red-600 text-white px-7 py-3.5 font-semibold tracking-wider text-sm transition-all duration-200 shadow-lg shadow-red-900/40">
           GET A QUOTE
           <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
           </svg>
         </a>
         <a href="#products"
-           class="inline-flex items-center gap-3 border-2 border-white/50 hover:border-white text-white hover:bg-white/10 px-8 py-4 font-semibold tracking-wider text-sm transition-all duration-200">
+           class="inline-flex items-center justify-center gap-3 border-2 border-white/50 hover:border-white text-white hover:bg-white/10 px-7 py-3.5 font-semibold tracking-wider text-sm transition-all duration-200">
           VIEW PRODUCTS
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
           </svg>
         </a>
         <a href="{{ asset('downloads/sms-catalog.pdf') }}" download
-           class="inline-flex items-center gap-2 text-white/70 hover:text-white text-sm font-semibold tracking-wider transition-colors">
+           class="inline-flex items-center justify-center gap-2 text-white/70 hover:text-white text-sm font-semibold tracking-wider transition-colors py-2">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
           </svg>
@@ -509,7 +509,7 @@ tailwind.config = {
           {{-- Accent bar --}}
           <div class="h-3 w-full" style="background: linear-gradient(90deg,#7f1d1d,#dc2626,#d97706);"></div>
           {{-- Offset tag --}}
-          <div class="absolute -bottom-4 -right-4 bg-red-800 text-white px-6 py-3 shadow-xl">
+          <div class="hidden sm:block absolute -bottom-4 -right-4 bg-red-800 text-white px-6 py-3 shadow-xl">
             <div class="font-display text-2xl">EST. 1996</div>
           </div>
         </div>
@@ -862,6 +862,7 @@ document.addEventListener('alpine:init', () => {
             {{-- Size + weight table --}}
             <template x-if="product.specs">
               <div>
+                <div class="overflow-x-auto">
                 <table class="w-full text-sm border-collapse">
                   <thead>
                     <tr class="bg-gray-900 text-white">
@@ -878,6 +879,7 @@ document.addEventListener('alpine:init', () => {
                     </template>
                   </tbody>
                 </table>
+                </div>
                 <p class="mt-2 text-[10px] text-gray-400 italic">*Theoretical weight ±3%. Cut-to-length available on request.</p>
               </div>
             </template>
@@ -1190,7 +1192,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
         <span class="text-xs tracking-[0.4em] uppercase text-red-400 font-semibold">Why Choose Us</span>
         <div class="h-px w-10 bg-red-600"></div>
       </div>
-      <h2 class="font-display text-4xl md:text-5xl lg:text-[3.5rem] leading-none">
+      <h2 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] leading-none">
         THE <span class="text-red-500">SOUTHERN MEGA STEEL</span> ADVANTAGE
       </h2>
       <p class="mt-4 text-gray-400 max-w-xl mx-auto">
@@ -2015,15 +2017,15 @@ $galleryJson = json_encode(array_map(fn($g) => [
     <div class="flex flex-col lg:flex-row items-start gap-10 justify-center reveal">
 
       {{-- Facebook Page Plugin --}}
-      <div class="flex-shrink-0 flex flex-col items-center">
+      <div class="w-full lg:w-auto flex-shrink-0 flex flex-col items-center overflow-hidden">
         <div id="fb-root"></div>
-        <div class="fb-page shadow-lg"
+        <div class="fb-page shadow-lg w-full"
              data-href="https://www.facebook.com/southernmegasteel"
              data-tabs="timeline"
-             data-width="400"
+             data-width="500"
              data-height="600"
              data-small-header="false"
-             data-adapt-container-width="false"
+             data-adapt-container-width="true"
              data-hide-cover="false"
              data-show-facepile="true">
           {{-- Fallback while SDK loads --}}
