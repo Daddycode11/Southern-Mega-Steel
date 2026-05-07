@@ -1,6 +1,6 @@
 {{-- Topbar --}}
 <div class="hidden md:block bg-gray-900 text-white/70 text-xs">
-  <div class="container mx-auto px-6 flex justify-between items-center h-9">
+  <div class="container mx-auto px-4 sm:px-6 flex justify-between items-center h-9">
     <div class="flex items-center gap-6">
       <span class="flex items-center gap-2">
         <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
@@ -29,8 +29,8 @@
      @scroll.window="scrolled = (window.scrollY > 20)"
      :class="scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200/80' : 'bg-white border-b border-gray-200'"
      class="sticky top-0 z-50 transition-all duration-300">
-  <div class="container mx-auto px-6">
-    <div class="flex items-center justify-between h-[5.5rem]">
+  <div class="container mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between h-16 sm:h-[5.5rem]">
 
       {{-- Brand Logo --}}
       <a href="#home" class="flex items-center flex-shrink-0 group">

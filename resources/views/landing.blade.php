@@ -121,6 +121,23 @@ tailwind.config = {
   /* Form input focus ring */
   .form-input:focus { outline: none; border-color: #b91c1c; box-shadow: 0 0 0 3px rgba(185,28,28,.15); }
 
+  /* ── Global overflow guard ── */
+  html { overflow-x: hidden; }
+  img, video, iframe, svg { max-width: 100%; height: auto; }
+
+  /* ── Prevent iOS auto-zoom on input focus (font-size must be ≥16px) ── */
+  @media screen and (max-width: 1023px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    textarea { font-size: 16px; }
+  }
+
+  /* ── Facebook embed responsiveness ── */
+  .fb-page, .fb-page span, .fb-page iframe { max-width: 100% !important; }
+
   /* Preloader */
   #sms-preloader {
     position: fixed; inset: 0; z-index: 9999;
@@ -240,11 +257,11 @@ tailwind.config = {
 
   {{-- Main hero content --}}
   <div class="relative flex-1 flex items-center">
-    <div class="container mx-auto px-4 sm:px-6 py-16 sm:py-24 lg:py-32">
+    <div class="container mx-auto px-4 sm:px-6 py-12 sm:py-20 lg:py-32">
 
       {{-- Text content wrapped in subtle dark backdrop for readability --}}
       <div class="relative max-w-3xl">
-        <div class="absolute -inset-6 sm:-inset-10 bg-gradient-to-r from-black/40 via-black/20 to-transparent rounded-sm pointer-events-none"></div>
+        <div class="absolute -inset-4 sm:-inset-10 bg-gradient-to-r from-black/40 via-black/20 to-transparent rounded-sm pointer-events-none"></div>
 
         <div class="relative">
 
@@ -258,7 +275,7 @@ tailwind.config = {
       <div class="mb-10">
         <img src="{{ asset('images/sms-logo.png') }}"
              alt="Southern Mega Steel Enterprise Incorporated"
-             class="h-20 sm:h-24 w-auto object-contain drop-shadow-2xl">
+             class="h-14 sm:h-20 lg:h-24 w-auto max-w-[85vw] object-contain drop-shadow-2xl">
       </div>
 
       {{-- Main headline --}}
@@ -315,26 +332,26 @@ tailwind.config = {
   {{-- Stats bar — pinned to bottom of full-screen hero --}}
   <div class="relative bg-black/65 backdrop-blur-sm border-t border-white/10">
     <div class="container mx-auto px-4 sm:px-6">
-      <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
-        <div class="py-6 px-4 text-center">
+      <div class="grid grid-cols-2 md:grid-cols-4">
+        <div class="py-5 px-3 sm:px-4 text-center border-r border-b md:border-b-0 border-white/10">
           <div class="font-display text-2xl sm:text-3xl md:text-4xl text-white leading-none">
             <span class="counter" data-target="30">0</span><span class="text-red-500">+</span>
           </div>
           <div class="text-[10px] tracking-widest uppercase text-white/45 mt-1.5">Years of Excellence</div>
         </div>
-        <div class="py-6 px-4 text-center">
+        <div class="py-5 px-3 sm:px-4 text-center border-b md:border-b-0 md:border-r border-white/10">
           <div class="font-display text-2xl sm:text-3xl md:text-4xl text-white leading-none">
             <span class="counter" data-target="17">0</span><span class="text-red-500">+</span>
           </div>
           <div class="text-[10px] tracking-widest uppercase text-white/45 mt-1.5">Product Lines</div>
         </div>
-        <div class="py-6 px-4 text-center">
+        <div class="py-5 px-3 sm:px-4 text-center border-r border-white/10">
           <div class="font-display text-2xl sm:text-3xl md:text-4xl text-white leading-none">
             <span class="counter" data-target="100">0</span><span class="text-red-500">%</span>
           </div>
           <div class="text-[10px] tracking-widest uppercase text-white/45 mt-1.5">Quality Assured</div>
         </div>
-        <div class="py-6 px-4 text-center">
+        <div class="py-5 px-3 sm:px-4 text-center">
           <div class="font-display text-2xl sm:text-3xl md:text-4xl text-white leading-none">
             <span class="counter" data-target="500">0</span><span class="text-red-500">+</span>
           </div>
@@ -359,9 +376,9 @@ tailwind.config = {
 </div>
 
 {{-- Products ticker --}}
-<div class="bg-gray-950 text-white/55 py-3.5 overflow-hidden border-b border-white/5">
-  <div class="flex gap-14 animate-marquee whitespace-nowrap font-display tracking-widest text-base">
-    <span class="flex items-center gap-14 flex-shrink-0">
+<div class="bg-gray-950 text-white/55 py-3.5 overflow-hidden border-b border-white/5" style="max-width:100vw;">
+  <div class="flex gap-10 sm:gap-14 animate-marquee whitespace-nowrap font-display tracking-widest text-sm sm:text-base">
+    <span class="flex items-center gap-10 sm:gap-14 flex-shrink-0">
       <span>I-BEAM</span><span class="text-red-600">●</span>
       <span>H-BEAM</span><span class="text-red-600">●</span>
       <span>WIDE FLANGE</span><span class="text-red-600">●</span>
@@ -785,7 +802,7 @@ document.addEventListener('alpine:init', () => {
        x-cloak
        class="fixed inset-0 z-[9000] bg-black/80 overflow-y-auto"
        @click.self="close()">
-    <div class="min-h-full flex items-center justify-center p-4 py-8">
+    <div class="min-h-full flex items-center justify-center p-2 sm:p-4 py-6 sm:py-8">
 
       <div class="bg-white w-full max-w-3xl shadow-2xl"
            x-show="modal"
@@ -816,10 +833,10 @@ document.addEventListener('alpine:init', () => {
         </div>
 
         {{-- Modal body --}}
-        <div class="grid md:grid-cols-5">
+        <div class="grid md:grid-cols-5 overflow-y-auto" style="max-height:65vh;">
 
           {{-- Left: description + uses + lengths --}}
-          <div class="md:col-span-2 p-6 border-b md:border-b-0 md:border-r border-gray-100">
+          <div class="md:col-span-2 p-4 sm:p-6 border-b md:border-b-0 md:border-r border-gray-100">
             <p class="text-sm text-gray-600 leading-relaxed" x-text="product.desc"></p>
 
             <div class="mt-5">
@@ -847,7 +864,7 @@ document.addEventListener('alpine:init', () => {
           </div>
 
           {{-- Right: sizes / specs table --}}
-          <div class="md:col-span-3 p-6">
+          <div class="md:col-span-3 p-4 sm:p-6">
             <div class="text-[10px] tracking-[0.3em] uppercase font-semibold text-gray-500 mb-3">Available Sizes</div>
 
             {{-- Size + weight table --}}
@@ -871,7 +888,7 @@ document.addEventListener('alpine:init', () => {
                   </tbody>
                 </table>
                 </div>
-                <p class="mt-2 text-[10px] text-gray-400 italic">*Theoretical weight Â±3%. Cut-to-length available on request.</p>
+                <p class="mt-2 text-[10px] text-gray-400 italic">*Theoretical weight ±3%. Cut-to-length available on request.</p>
               </div>
             </template>
 
@@ -976,7 +993,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
     </div>
 
     {{-- Gallery grid --}}
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 reveal">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 reveal">
       @foreach($gallery as $i => $g)
       <div class="group relative overflow-hidden aspect-square bg-gray-800 cursor-zoom-in"
            x-data="{ err: false }"
@@ -1183,8 +1200,8 @@ $galleryJson = json_encode(array_map(fn($g) => [
         <span class="text-xs tracking-[0.4em] uppercase text-red-400 font-semibold">Why Choose Us</span>
         <div class="h-px w-10 bg-red-600"></div>
       </div>
-      <h2 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] leading-none">
-        THE <span class="text-red-500">SOUTHERN MEGA STEEL</span> ADVANTAGE
+      <h2 class="font-display text-2xl sm:text-4xl md:text-5xl lg:text-[3.5rem] leading-none">
+        THE <span class="text-red-500">SOUTHERN<br class="sm:hidden"> MEGA STEEL</span> ADVANTAGE
       </h2>
       <p class="mt-4 text-gray-400 max-w-xl mx-auto">
         Here's why hundreds of contractors and developers across the Philippines trust us as their steel partner.
@@ -1266,10 +1283,10 @@ $galleryJson = json_encode(array_map(fn($g) => [
       @php
       $certs = [
         ['icon'=>'⚙️','code'=>'PNS','label'=>'Philippine National Standard','color'=>'red'],
-        ['icon'=>'ðŸ—ï¸','code'=>'DPWH','label'=>'Accredited DPWH Supplier','color'=>'blue'],
-        ['icon'=>'ðŸ…','code'=>'ISO','label'=>'ISO 9001 Quality Management','color'=>'amber'],
-        ['icon'=>'ðŸ”¬','code'=>'BPS','label'=>'Bureau of Product Standards','color'=>'green'],
-        ['icon'=>'ðŸ“‹','code'=>'BIR','label'=>'BIR Registered Enterprise','color'=>'purple'],
+        ['icon'=>'🏗️','code'=>'DPWH','label'=>'Accredited DPWH Supplier','color'=>'blue'],
+        ['icon'=>'🏅','code'=>'ISO','label'=>'ISO 9001 Quality Management','color'=>'amber'],
+        ['icon'=>'🔬','code'=>'BPS','label'=>'Bureau of Product Standards','color'=>'green'],
+        ['icon'=>'📋','code'=>'BIR','label'=>'BIR Registered Enterprise','color'=>'purple'],
       ];
       @endphp
       @foreach($certs as $c)
@@ -1455,8 +1472,8 @@ $galleryJson = json_encode(array_map(fn($g) => [
 
       {{-- Simplified Philippines SVG Map --}}
       <div class="flex justify-center">
-        <div class="relative">
-          <svg viewBox="0 0 260 580" class="w-56 md:w-64 drop-shadow-2xl" xmlns="http://www.w3.org/2000/svg">
+        <div class="flex items-start gap-4 sm:gap-6">
+          <svg viewBox="0 0 260 580" class="w-40 xs:w-44 sm:w-52 md:w-60 flex-shrink-0 drop-shadow-2xl" xmlns="http://www.w3.org/2000/svg">
             {{-- LUZON --}}
             <g class="luzon-group">
               <polygon points="120,10 150,8 175,25 185,55 175,90 190,120 180,155 165,170 145,165 130,180 110,170 95,145 85,115 90,85 75,60 90,35" fill="#ef4444" opacity="0.85" stroke="#7f1d1d" stroke-width="1.5"/>
@@ -1500,8 +1517,8 @@ $galleryJson = json_encode(array_map(fn($g) => [
             <text x="155" y="420" text-anchor="middle" fill="white" font-size="9" font-weight="bold" font-family="sans-serif" opacity="0.9">MINDANAO</text>
           </svg>
 
-          {{-- Legend --}}
-          <div class="absolute -right-28 top-0 flex flex-col gap-2 text-xs">
+          {{-- Legend: inline beside map on all screen sizes --}}
+          <div class="flex flex-col gap-2 text-xs pt-6 flex-shrink-0">
             <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm bg-red-500 flex-shrink-0"></span><span class="text-gray-300">Luzon</span></div>
             <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm bg-yellow-400 flex-shrink-0"></span><span class="text-gray-300">Visayas</span></div>
             <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm bg-emerald-400 flex-shrink-0"></span><span class="text-gray-300">Mindanao</span></div>
@@ -1544,7 +1561,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
               <span class="w-3 h-3 rounded-sm {{ $colorMap[$cov['color']] }} flex-shrink-0"></span>
               <span class="font-display text-xl text-white">{{ $cov['island'] }}</span>
             </div>
-            <span class="text-[10px] text-white/50 tracking-widest uppercase border border-white/20 px-2 py-0.5">ETA {{ $cov['eta'] }}</span>
+            <span class="text-[10px] text-white/50 tracking-wide uppercase border border-white/20 px-2 py-0.5 whitespace-nowrap flex-shrink-0">ETA {{ $cov['eta'] }}</span>
           </div>
           <div class="flex flex-wrap gap-1.5">
             @foreach($cov['areas'] as $area)
@@ -1599,7 +1616,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
              sizes: {
                ibeam:   [['S100x50','8.34'],['S125x65','11.9'],['S150x75','14.7'],['S175x90','18.8'],['S200x100','25.3'],['S250x118','37.4'],['S300x126','48.3'],['S350x140','60.7']],
                wflange: [['W150x13','13.0'],['W150x18','17.9'],['W200x19','19.3'],['W200x26','26.1'],['W250x25','25.1'],['W250x39','38.5'],['W300x32','32.3'],['W300x52','52.2'],['W350x45','44.8'],['W400x60','60.3']],
-               rebar:   [['10mm Ã˜','0.617'],['12mm Ã˜','0.888'],['16mm Ã˜','1.578'],['20mm Ã˜','2.466'],['25mm Ã˜','3.854'],['28mm Ã˜','4.834'],['32mm Ã˜','6.313']],
+               rebar:   [['10mm Ø','0.617'],['12mm Ø','0.888'],['16mm Ø','1.578'],['20mm Ø','2.466'],['25mm Ø','3.854'],['28mm Ø','4.834'],['32mm Ø','6.313']],
                anglebar:[['25x25x3mm','1.12'],['32x32x3mm','1.46'],['40x40x3mm','1.84'],['40x40x5mm','2.97'],['50x50x5mm','3.77'],['65x65x6mm','5.91'],['75x75x6mm','6.85'],['100x100x8mm','12.2']],
                msplate: [['3mm','23.55'],['4.5mm','35.33'],['6mm','47.10'],['8mm','62.80'],['10mm','78.50'],['12mm','94.20']],
              },
@@ -1610,7 +1627,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
                if(!w || !this.length || !this.qty) { this.result = null; return; }
                let L = parseFloat(this.length), Q = parseFloat(this.qty);
                if(this.type === 'msplate') {
-                 // MS Plate: weight per mÂ², length = area in mÂ²
+                 // MS Plate: weight per m², length = area in m²
                  this.result = { totalKg: (w * L * Q).toFixed(1), tons: (w * L * Q / 1000).toFixed(3), pcsPerTon: Math.round(1000 / (w * L)) };
                } else {
                  this.result = { totalKg: (w * L * Q).toFixed(1), tons: (w * L * Q / 1000).toFixed(3), pcsPerTon: Math.round(1000 / (w * L)) };
@@ -1637,7 +1654,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
                     class="form-input w-full border border-gray-300 px-4 py-3 text-sm bg-white disabled:opacity-40">
               <option value="">Select size…</option>
               <template x-for="s in sizeOptions" :key="s[0]">
-                <option :value="s[0]" x-text="s[0] + '  (' + s[1] + ' kg/m' + (type==='msplate'?'Â²':'/m') + ')'"></option>
+                <option :value="s[0]" x-text="s[0] + '  (' + s[1] + ' kg/m' + (type==='msplate'?'²':'/m') + ')'"></option>
               </template>
             </select>
           </div>
@@ -1646,7 +1663,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
         <div class="grid sm:grid-cols-3 gap-5 mb-8">
           <div class="sm:col-span-1">
             <label class="block text-xs font-semibold tracking-widest uppercase text-gray-700 mb-2"
-                   x-text="type === 'msplate' ? 'Area (mÂ²/pc)' : 'Length per pc (m)'"></label>
+                   x-text="type === 'msplate' ? 'Area (m²/pc)' : 'Length per pc (m)'"></label>
             <input type="number" x-model="length" min="0.1" step="0.1" @input="result=null"
                    :placeholder="type === 'msplate' ? 'e.g. 5.76' : 'e.g. 6'"
                    class="form-input w-full border border-gray-300 px-4 py-3 text-sm bg-white">
@@ -1683,7 +1700,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
               <div class="text-[10px] sm:text-xs text-gray-500 mt-1 uppercase tracking-wider">Pcs / Ton</div>
             </div>
           </div>
-          <p class="text-xs text-gray-400 mt-5 text-center">*Theoretical weight based on standard density. Actual weight may vary Â±3%.</p>
+          <p class="text-xs text-gray-400 mt-5 text-center">*Theoretical weight based on standard density. Actual weight may vary ±3%.</p>
           <div class="mt-4 text-center">
             <a href="#inquire" class="text-sm font-semibold text-red-800 hover:underline">
               → Get an exact quote for this order
@@ -1871,7 +1888,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
         </form>
 
         {{-- Contact details --}}
-        <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-5 pt-8 border-t border-gray-200">
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 pt-8 border-t border-gray-200">
           <div>
             <div class="text-[10px] tracking-[0.3em] uppercase text-gray-500 font-semibold mb-1.5">Phone</div>
             <a href="tel:+639310599611" class="text-sm font-medium text-gray-900 hover:text-red-800 transition-colors">
@@ -1893,13 +1910,13 @@ $galleryJson = json_encode(array_map(fn($g) => [
 
       {{-- Map --}}
       <div class="flex flex-col gap-5">
-        <div class="flex-1 relative bg-gray-100 overflow-hidden" style="min-height: 380px;">
+        <div class="flex-1 relative bg-gray-100 overflow-hidden" style="min-height: 280px;">
           {{-- Replace the src below with your actual Google Maps embed URL for your exact address in Bacoor, Cavite --}}
           <iframe
             src="https://maps.google.com/maps?q=Southern+Mega+Steel+Enterprise+Inc,+Avenida+St,+Molino+3,+Bacoor,+Cavite,+Philippines&output=embed"
             width="100%"
             height="100%"
-            style="border:0; min-height:380px;"
+            style="border:0; min-height:280px;"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -2085,12 +2102,12 @@ $galleryJson = json_encode(array_map(fn($g) => [
     <div class="flex flex-col lg:flex-row items-start gap-8 lg:gap-10 justify-center reveal">
 
       {{-- Facebook Page Plugin --}}
-      <div class="w-full lg:w-auto flex-shrink-0 flex flex-col items-center overflow-hidden">
+      <div class="w-full lg:w-auto flex-shrink-0 flex flex-col items-center overflow-hidden" style="max-width:100%;">
         <div id="fb-root"></div>
         <div class="fb-page shadow-lg w-full"
              data-href="https://www.facebook.com/southernmegasteel"
              data-tabs="timeline"
-             data-width="500"
+             data-width="380"
              data-height="600"
              data-small-header="false"
              data-adapt-container-width="true"
@@ -2141,7 +2158,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
           <div class="font-semibold">Monday – Saturday</div>
           <div class="text-red-200 text-sm">8:00 AM – 6:00 PM PHT</div>
           <div class="mt-3 pt-3 border-t border-red-700">
-            <a href="tel:+639310599611" class="text-sm hover:text-red-200 transition-colors">ðŸ“ž 0931 059 9611</a>
+            <a href="tel:+639310599611" class="text-sm hover:text-red-200 transition-colors">📞 0931 059 9611</a>
           </div>
         </div>
       </div>
@@ -2237,7 +2254,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
       </div>
     </div>
 
-    <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+    <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
       <div class="text-xs text-gray-600">
         &copy; {{ date('Y') }} Southern Mega Steel Enterprise Incorporated. All rights reserved.
       </div>
