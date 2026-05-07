@@ -1298,82 +1298,6 @@ $galleryJson = json_encode(array_map(fn($g) => [
       @endforeach
     </div>
 
-    {{-- Business Credentials: document image cards --}}
-    <div class="mt-14 reveal">
-      <div class="flex items-center gap-3 mb-8">
-        <div class="h-px flex-1 bg-gray-100"></div>
-        <span class="text-xs tracking-[0.35em] uppercase text-gray-500 font-semibold whitespace-nowrap">Certified for Quality and Reliability</span>
-        <div class="h-px flex-1 bg-gray-100"></div>
-      </div>
-
-      @php
-      $credentials = [
-        [
-          'img'     => 'images/certs/mayors-permit.jpg',
-          'title'   => "Mayor's Permit",
-          'issuer'  => 'City Government of Bacoor',
-          'badge'   => 'LGU Authorized',
-        ],
-        [
-          'img'     => 'images/certs/cert-of-registration.jpg',
-          'title'   => 'Certificate of Registration',
-          'issuer'  => 'Securities and Exchange Commission',
-          'badge'   => 'SEC Registered',
-        ],
-        [
-          'img'     => 'images/certs/dti.jpg',
-          'title'   => 'DTI Registration',
-          'issuer'  => 'Dept. of Trade & Industry',
-          'badge'   => 'DTI Registered',
-        ],
-      ];
-      @endphp
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-        @foreach($credentials as $doc)
-        <div class="group border-2 border-gray-100 hover:border-red-200 hover:shadow-lg transition-all duration-300 overflow-hidden bg-white">
-
-          {{-- Document image preview --}}
-          <div class="relative bg-gray-50 overflow-hidden" style="aspect-ratio:3/4; max-height:320px;">
-            @if(file_exists(public_path($doc['img'])))
-              <img src="{{ asset($doc['img']) }}"
-                   alt="{{ $doc['title'] }}"
-                   class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-            @else
-              {{-- Placeholder shown until actual document scan is uploaded --}}
-              <div class="w-full h-full flex flex-col items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100 text-gray-300 gap-4 px-6">
-                <svg class="w-16 h-16 text-gray-200" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                </svg>
-                <span class="text-xs text-gray-300 text-center leading-snug">Upload document scan to<br><code class="text-[10px]">public/{{ $doc['img'] }}</code></span>
-              </div>
-            @endif
-
-            {{-- Verified badge overlay --}}
-            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-white/90 backdrop-blur-sm
-                        text-green-700 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1.5
-                        shadow border border-green-100">
-              <svg class="w-3 h-3 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-              </svg>
-              {{ $doc['badge'] }}
-            </div>
-          </div>
-
-          {{-- Card footer --}}
-          <div class="p-5 border-t-2 border-red-800">
-            <div class="font-display text-lg text-gray-900 leading-tight group-hover:text-red-800 transition-colors">
-              {{ $doc['title'] }}
-            </div>
-            <div class="text-xs text-gray-500 mt-1 leading-snug">{{ $doc['issuer'] }}</div>
-          </div>
-
-        </div>
-        @endforeach
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -1903,7 +1827,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
           </div>
           <div>
             <div class="text-[10px] tracking-[0.3em] uppercase text-gray-500 font-semibold mb-1.5">Hours</div>
-            <div class="text-sm font-medium text-gray-900">Mon–Sat · 8AM–6PM</div>
+            <div class="text-sm font-medium text-gray-900">Mon–Fri · 9AM–5PM</div>
           </div>
         </div>
       </div>
@@ -2216,14 +2140,18 @@ $galleryJson = json_encode(array_map(fn($g) => [
       {{-- Products --}}
       <div>
         <div class="text-[10px] tracking-[0.3em] uppercase text-gray-500 font-semibold mb-5">Products</div>
-        <ul class="space-y-3">
-          <li><a href="#products" class="text-sm text-gray-400 hover:text-white transition-colors">I-Beam</a></li>
+        <ul class="space-y-2">
+          <li><a href="#products" class="text-sm text-gray-400 hover:text-white transition-colors">I-Beam / H-Beam</a></li>
           <li><a href="#products" class="text-sm text-gray-400 hover:text-white transition-colors">Wide Flange</a></li>
+          <li><a href="#products" class="text-sm text-gray-400 hover:text-white transition-colors">T-Beam</a></li>
           <li><a href="#products" class="text-sm text-gray-400 hover:text-white transition-colors">MS Plate</a></li>
-          <li><a href="#products" class="text-sm text-gray-400 hover:text-white transition-colors">Steel Pipes</a></li>
+          <li><a href="#products" class="text-sm text-gray-400 hover:text-white transition-colors">Sheet Pile / Z Type</a></li>
+          <li><a href="#products" class="text-sm text-gray-400 hover:text-white transition-colors">Steel Tubular B.I / G.I</a></li>
+          <li><a href="#products" class="text-sm text-gray-400 hover:text-white transition-colors">Steel Pipe B.I / G.I</a></li>
+          <li class="pt-1 border-t border-white/10"><a href="#products" class="text-sm text-gray-400 hover:text-white transition-colors">C-Channel / Channel Bar</a></li>
+          <li><a href="#products" class="text-sm text-gray-400 hover:text-white transition-colors">Anchor Bolt</a></li>
           <li><a href="#products" class="text-sm text-gray-400 hover:text-white transition-colors">Deformed Bar</a></li>
-          <li><a href="#products" class="text-sm text-gray-400 hover:text-white transition-colors">C-Channel</a></li>
-          <li><a href="#products" class="text-sm text-gray-400 hover:text-white transition-colors">Angle Bar</a></li>
+          <li><a href="#products" class="text-sm text-gray-400 hover:text-white transition-colors">Plain Round Bar</a></li>
         </ul>
       </div>
 
@@ -2248,7 +2176,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
             <svg class="w-4 h-4 text-red-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
             </svg>
-            <span class="text-sm text-gray-400">Mon–Sat · 8AM–6PM</span>
+            <span class="text-sm text-gray-400">Mon–Fri · 9AM–5PM</span>
           </li>
         </ul>
       </div>

@@ -17,7 +17,7 @@
       </span>
     </div>
     <div class="flex items-center gap-4">
-      <span class="tracking-[0.2em] uppercase text-[10px] text-yellow-400">Mon–Sat · 8AM–6PM</span>
+      <span class="tracking-[0.2em] uppercase text-[10px] text-yellow-400">Mon–Fri · 9AM–5PM</span>
       <a href="https://www.facebook.com/southernmegasteel" target="_blank" rel="noopener"
          class="hover:text-red-400 transition-colors">Facebook ↗</a>
     </div>
