@@ -947,17 +947,17 @@ document.addEventListener('alpine:init', () => {
 ================================================================ -->
 @php
 $gallery = [
-  ['file'=>'project-1.jpg','label'=>'Commercial Building','loc'=>'Metro Manila'],
-  ['file'=>'project-2.jpg','label'=>'Industrial Warehouse','loc'=>'Cavite'],
-  ['file'=>'project-3.jpg','label'=>'Bridge Structure','loc'=>'Calabarzon'],
-  ['file'=>'project-4.jpg','label'=>'Steel Fabrication','loc'=>'Bacoor'],
-  ['file'=>'project-5.jpg','label'=>'Residential Complex','loc'=>'Batangas'],
-  ['file'=>'project-6.jpg','label'=>'Road Infrastructure','loc'=>'Laguna'],
-  ['file'=>'project-7.jpg','label'=>'Steel Delivery','loc'=>'Nationwide'],
-  ['file'=>'project-8.jpg','label'=>'High-rise Frame','loc'=>'Makati'],
+  ['url'=>'https://images.pexels.com/photos/392031/pexels-photo-392031.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',  'label'=>'Commercial Building',  'loc'=>'Metro Manila'],
+  ['url'=>'https://images.pexels.com/photos/8960947/pexels-photo-8960947.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', 'label'=>'Industrial Warehouse',  'loc'=>'Cavite'],
+  ['url'=>'https://images.pexels.com/photos/4751795/pexels-photo-4751795.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',  'label'=>'Bridge Structure',      'loc'=>'Calabarzon'],
+  ['url'=>'https://images.pexels.com/photos/15947587/pexels-photo-15947587.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop','label'=>'Steel Fabrication',     'loc'=>'Bacoor'],
+  ['url'=>'https://images.pexels.com/photos/2383650/pexels-photo-2383650.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',  'label'=>'Residential Complex',   'loc'=>'Batangas'],
+  ['url'=>'https://images.pexels.com/photos/4170184/pexels-photo-4170184.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',  'label'=>'Road Infrastructure',   'loc'=>'Laguna'],
+  ['url'=>'https://images.pexels.com/photos/29842696/pexels-photo-29842696.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop','label'=>'Steel Delivery',        'loc'=>'Nationwide'],
+  ['url'=>'https://images.pexels.com/photos/9092855/pexels-photo-9092855.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',  'label'=>'High-rise Frame',       'loc'=>'Makati'],
 ];
 $galleryJson = json_encode(array_map(fn($g) => [
-  'src'   => asset('images/gallery/'.$g['file']),
+  'src'   => $g['url'],
   'label' => $g['label'],
   'loc'   => $g['loc'],
 ], $gallery));
@@ -998,7 +998,7 @@ $galleryJson = json_encode(array_map(fn($g) => [
       <div class="group relative overflow-hidden aspect-square bg-gray-800 cursor-zoom-in"
            x-data="{ err: false }"
            @click="!err && show({{ $i }})">
-        <img src="{{ asset('images/gallery/'.$g['file']) }}"
+        <img src="{{ $g['url'] }}"
              alt="{{ $g['label'] }}"
              x-on:error="err = true"
              x-show="!err"
